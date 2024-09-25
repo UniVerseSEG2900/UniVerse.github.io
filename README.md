@@ -3,7 +3,7 @@ We are UniVerse.
 Product name: UniVerse Lens
 Small device that allows the user to comprehend any spoken language and to respond in turn. 
 Features:
--Voice control
+\n-Voice control
 -Text to speech 
 -Accent and tone adjustment
 -Mobile app (for customizations)

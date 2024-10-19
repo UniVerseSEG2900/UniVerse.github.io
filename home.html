@@ -48,10 +48,37 @@ body {
     font-weight: bold;
 }
 
+.navigationbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    position: sticky; /* Keeps navigation bar at the top even when scrolling */
+    top:0;
+    z-index: 1000; /*Keep bar on top of everything*/
+}
+
+.navigationbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.navigationbar a:hover {  /* Style of navigation bar on hover */
+    background-color: #575757;
+}
 
 </style>
 </head>
 <body>
+
+<div class="navigationbar">
+    <a href="#overviewpage">Overview</a>
+    <a href="#pricingpage">Pricing</a>
+    <a href="#aboutuspage">About Us</a>
+</div>
 
 <div class="blackpage" id="homepage">
     <div class="headerblack"><h1>UniVerse</h1> <! -- Change the title here. --></div>

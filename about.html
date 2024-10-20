@@ -7,7 +7,7 @@ inside. */ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Who Are WE?</title>
+<title>About Us</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -18,6 +18,29 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: grey;
+}
+
+.image-container { /* Makes the image allow for overlap */
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img { /* Makes the image allow for overlap */
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text { /* Styles for text overlapping images */
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: #000000;
+  background-color: rgba(205, 205, 205, 0.5);
+  padding: 10px 10px; 
+  text-align: center;
+
 }
 
 .description { /* Style of background for first description */
@@ -67,7 +90,7 @@ body {
     <img src="C:\Users\vasee\dev\web_projects\my_first_website\UniVerse.github.io\images\about_us_header.jpg" alt="Group of employees collaborating" width="1518" height="238" class="center">
     <div class="overlay-text">
         <h1>
-            <p style="color:black; text-align:left; font-size: 40px">Who We Are <! -- Edit the title here. -->
+            <p style="color:black; text-align:left; font-size: 60px">Who We Are <! -- Edit the title here. -->
             </p>
         </h1>
     </div>

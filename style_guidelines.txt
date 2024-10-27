@@ -1,1 +1,11 @@
+Colour Palette:
+Black, white, gray, blue, purple
+
+Fonts:
+Currently: Arial
+
+Structure:
+- One pager
+- As the user scrolls, the page will change from black to white 
+
 

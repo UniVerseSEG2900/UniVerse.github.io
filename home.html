@@ -5,10 +5,12 @@ inside. */ -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>UniVerse</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UniVerse</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
 <style>
     
 html {
@@ -116,12 +118,9 @@ body {
     padding: 0px 0px;
 }
 
-
 </style>
 </head>
 <body>
-
-
 
 <div class="navigationbar">
     <a href="#overviewpage">Overview</a>
@@ -204,6 +203,103 @@ body {
     <h2>Team member 6 name</h2> <! -- Add your name here. -->
     <p style="color:black; font-size: 20px">About team member 6</p> <! -- Edit the description of team member 6 here. -->
 </div>
+
+<div class="contact-form-container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" 
+                   name="name" 
+                   placeholder="Your Name" required>
+            <span class="error-message" id="nameError"></span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" 
+                   name="email" 
+                   placeholder="Your Email" required>
+            <span class="error-message" id="emailError"></span>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" 
+                   name="phone" 
+                   placeholder="Your Phone Number" required>
+            <span class="error-message" id="phoneError"></span>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" 
+                      name="message" 
+                      placeholder="Your Message" 
+                      rows="5" required></textarea>
+            <span class="error-message" 
+                  id="messageError"></span>
+        </div>
+        <button type="submit" 
+                class="submit-button">
+          Send Message
+        </button>
+    </form>
+</div>
+
+<script type="text/javascript">
+
+    document.getElementById('orderForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Clear previous errors
+    const errorElements = document.querySelectorAll('.error-message');
+    errorElements.forEach(el => el.style.display = 'none');
+
+    // Get form values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const creditcard = document.getElementById('creditcard').value.trim();
+    const message = document.getElementById('request').value.trim();
+
+    // Validation flags
+    let isValid = true;
+
+    // Name validation
+    if (name === '') {
+        document.getElementById('nameError').textContent = 'Name is required';
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === '' || !emailPattern.test(email)) {
+        document.getElementById('emailError').textContent = 'Valid email is required';
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Phone validation
+    const phonePattern = /^[0-9]{10}$/;
+    if (phone === '' || !phonePattern.test(phone)) {
+        document.getElementById('phoneError').textContent = 'Valid phone number is required';
+        document.getElementById('phoneError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Message validation
+    if (message === '') {
+        document.getElementById('messageError').textContent = 'Message is required';
+        document.getElementById('messageError').style.display = 'block';
+        isValid = false;
+    }
+
+    // If form is valid, you can submit it or perform any other action
+    if (isValid) {
+        alert('Form submitted successfully!');
+    }
+});
+
+</script>
 
 </body>
 </html>

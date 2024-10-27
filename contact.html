@@ -115,6 +115,28 @@
         .social-media i:hover {
             color: #6f42c1;
         }
+
+        /*New CSS for error styling and popup*/
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            text-align: center;
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
@@ -122,7 +144,8 @@
         <div class="contact-section">
             <h1>Contact Us</h1>
             <p>Send us a message and we will get back to you in 1-2 business days</p>
-            <form action="submit_form.php" method="POST">
+            <form id="contactForm">
+                <div class="error" id="error-msg"></div>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -146,6 +169,46 @@
             </div>
         </div>
     </div>
+
+    <!--Popup for message sent-->
+    <div class="popup" id="popup">Sent</div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from actually submitting
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            const errorMsg = document.getElementById("error-msg");
+
+            errorMsg.innerText = ""; // Clear previous error messages
+
+            if (name === "" || email === "" || message === "") {
+                errorMsg.innerText = "Please fill in all fields.";
+                return;
+            }
+            
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                errorMsg.innerText = "Please enter a valid email address.";
+                return;
+            }
+
+            // Show the popup when the form is successfully validated
+            const popup = document.getElementById("popup");
+            popup.style.display = "block";
+
+            // Clear form fields
+            document.getElementById("contactForm").reset();
+
+            // Hide the popup after 2 seconds
+            setTimeout(() => {
+                popup.style.display = "none";
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
+   
+
+        
 

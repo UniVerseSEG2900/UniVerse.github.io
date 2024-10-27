@@ -49,8 +49,8 @@ inside. */ -->
         <p style="color:white; text-align:center; font-size: 25px">different options</p> <! -- Edit the description here. -->
     </div>
 
-    <div class="image-container" id="aboutuspage"> <! -- To change the header image, replace the file named "about_us_header" in the images folder. Will need to use CSS to reposition the image depending on the screen size and to have the title be place on top of the image. -->
-        <img src="images\about_us_header.jpg" alt="Group of employees collaborating" width="1518" height="238" class="center">
+    <div class="image-container" id="aboutuspage"> <! -- To change the header image, replace the file named "about_us_header" in the images folder. -->
+        <img src="images\about_us_header.jpg" alt="Group of employees collaborating">
         <div class="overlay-text">
             <p style="color:black; text-align:left"><h1>About Us</h1> <! -- Edit the title here. --></p>
         </div>
@@ -96,9 +96,16 @@ inside. */ -->
         <p style="color:black; font-size: 20px">About team member 6</p> <! -- Edit the description of team member 6 here. -->
     </div>
 
-    <div class="contact-form-container">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
+    <div class="image-container" id="contactpage"> <! -- To change the header image, replace the file named "contact_header" in the images folder. -->
+        <img src="images\contact_header.jpg" alt="Group of employees collaborating">
+        <div class="overlay-text">
+            <p style="color:black; text-align:left"><h1>Contact Us</h1> <! -- Edit the title here. --></p>
+        </div>
+    </div>
+
+    <div class="order-form-container">
+        <h2>Place your order now!</h2>
+        <form id="orderForm">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" 
@@ -198,7 +205,6 @@ inside. */ -->
             alert('Form submitted successfully!');
         }
     });
-
     </script>
 </body>
 </html>

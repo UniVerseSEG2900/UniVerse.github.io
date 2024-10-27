@@ -103,9 +103,16 @@ body {
     padding: 0px 0px;
 }
 
+.img {
+    height: 200px; /* Size of each profile's section */
+    background-color: #e9ebec;
+    border: 50px solid #e9ebec;
+    float: right
+}
+
 /*Styles for order form*/
 
-.contact-form-container {
+.order-form-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;

@@ -105,7 +105,7 @@ inside. */ -->
     </div>
 
     <div class="order-form-container">
-        <h2>Place your order now!</h2>
+        <h2>Contact Us Here</h2>
         <form id="orderForm">
             <div class="form-group">
                 <label for="name">Name</label>
@@ -121,6 +121,28 @@ inside. */ -->
                     placeholder="Your Email" required>
                 <span class="error-message" id="emailError"></span>
             </div>
+
+            <! -- Add deleted section here if we want to make this back into an order form -->
+
+            <div class="form-group">
+                <label for="concerns">How can we help you?</label>
+                <textarea id="concerns" 
+                        name="concerns" 
+                        placeholder="Anything you'd like to share? Put it here!" 
+                        rows="5" required></textarea>
+                <span class="error-message" id="concernsError"></span>
+            </div>
+            <button type="submit" 
+                    class="submit-button"> 
+                    Send Message
+            </button>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+
+        /*
+            // Below code normally goes into contact form (if we decide to change it into an order form)
             <div class="form-group">
                 <label for="phone">Phone</label>
                 <input type="tel" id="phone" 
@@ -135,22 +157,8 @@ inside. */ -->
                     placeholder="Your Postal Code Number" required>
                 <span class="error-message" id="addressError"></span>
             </div>
-            <div class="form-group">
-                <label for="concerns">Concerns</label>
-                <textarea id="concerns" 
-                        name="concerns" 
-                        placeholder="Anything else you'd like to add? Put it here!" 
-                        rows="5"></textarea>
-                <span class="error-message" id="concernsError"></span>
-            </div>
-            <button type="submit" 
-                    class="submit-button">
-            Send Message
-            </button>
-        </form>
-    </div>
 
-    <script type="text/javascript">
+        */
 
         document.getElementById('orderForm').addEventListener('submit', function (event) {
         event.preventDefault();
@@ -162,9 +170,9 @@ inside. */ -->
         // Get form values
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        const address = document.getElementById('shipping address').value.trim();
-        const creditcard = document.getElementById('creditcard').value.trim();
+        //const phone = document.getElementById('phone').value.trim();
+        //const address = document.getElementById('shipping address').value.trim();
+        //const creditcard = document.getElementById('creditcard').value.trim();
         const message = document.getElementById('request').value.trim();
 
         // Validation flags
@@ -185,6 +193,7 @@ inside. */ -->
             isValid = false;
         }
 
+        /*
         // Phone validation
         const phonePattern = /^[0-9]{10}$/;
         if (phone === '' || !phonePattern.test(phone)) {
@@ -200,6 +209,7 @@ inside. */ -->
             document.getElementById('addressError').style.display = 'block';
             isValid = false;
         }
+        */
 
         // If form is valid, you can submit it or perform any other action
         if (isValid) {

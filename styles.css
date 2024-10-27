@@ -1,0 +1,160 @@
+html {
+    scroll-behavior: smooth; /* Makes scrolling through the pages smooth */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.blackpage { /* Style of page with black background */
+    height: 1000px; /* Size of page can be adjusted as more content get added */
+    background-color: black; 
+    border: 5px solid black;
+}
+
+.whitepage { /* Style of page with white background */
+    height: 1000px; /* Size of page can be adjusted as more content get added */
+    background-color: #e9ebec; 
+    border: 5px solid #e9ebec;
+}
+
+.headerblack { /*Style of header on a black page */
+        padding-top:50px; 
+        padding-bottom:30px; 
+        color:white; 
+        font-size: 40px; 
+        text-align:center; 
+        font-weight: bold;
+}
+
+.headerwhite { /*Style of header on a white page */
+    padding-top:50px; 
+    padding-bottom:30px; 
+    color:black; 
+    font-size: 40px; 
+    text-align:center; 
+    font-weight: bold;
+}
+
+.description { /* Style of background for first description */
+    height: 300px; /* Size of description box */
+    background-color: #e9ebec;
+    border: 10px solid #e9ebec; 
+}
+
+.profile { /* Style of background for profile descriptions */
+    height: 250px; /* Size of each profile's section */
+    background-color: #e9ebec;
+    border: 50px solid #e9ebec;
+    column-count: 3; /* Creates 3 columns per row */
+    column-gap: 20%
+}
+
+.navigationbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    position: sticky; /* Keeps navigation bar at the top even when scrolling */
+    top:0;
+    z-index: 1000; /*Keep bar on top of everything*/
+}
+
+.navigationbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+}
+
+.navigationbar a:hover {  /* Style of navigation bar on hover */
+    background-color: #575757;
+}
+
+.image-container { /* Makes the image allow for overlap */
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img { /* Makes the image allow for overlap */
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text { /* Styles for text overlapping images */
+  position: absolute;
+  top: 50%; /* Centers the title */
+  left: 50%; /* Centers the title */
+  transform: translate(-50%, -50%);
+  color: #000000;
+  background-color: rgba(205, 205, 205, 0.5); /* Creates semi-transparent backdrop behind title */
+  padding: 10px 10px;
+  font-size: 40px
+}
+
+.logo {
+    display: flex;
+    position: sticky;
+    top: 55px;
+    right: 15px; 
+    float: right;
+    padding: 0px 0px;
+}
+
+/*Styles for order form*/
+
+.contact-form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 40%;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    display: none; /* Hidden by default */
+}
+
+.submit-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}

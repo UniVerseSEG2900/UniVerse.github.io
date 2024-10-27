@@ -11,295 +11,194 @@ inside. */ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-<style>
-    
-html {
-    scroll-behavior: smooth; /* Makes scrolling through the pages smooth */
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-
-.blackpage { /* Style of page with black background */
-    height: 1000px; /* Size of page can be adjusted as more content get added */
-    background-color: black; 
-    border: 5px solid black;
-}
-
-.whitepage { /* Style of page with white background */
-    height: 1000px; /* Size of page can be adjusted as more content get added */
-    background-color: #e9ebec; 
-    border: 5px solid #e9ebec;
-}
-
-.headerblack { /*Style of header on a black page */
-        padding-top:50px; 
-        padding-bottom:30px; 
-        color:white; 
-        font-size: 40px; 
-        text-align:center; 
-        font-weight: bold;
-}
-
-.headerwhite { /*Style of header on a white page */
-    padding-top:50px; 
-    padding-bottom:30px; 
-    color:black; 
-    font-size: 40px; 
-    text-align:center; 
-    font-weight: bold;
-}
-
-.description { /* Style of background for first description */
-    height: 300px; /* Size of description box */
-    background-color: #e9ebec;
-    border: 10px solid #e9ebec; 
-}
-
-.profile { /* Style of background for profile descriptions */
-    height: 250px; /* Size of each profile's section */
-    background-color: #e9ebec;
-    border: 50px solid #e9ebec;
-    column-count: 3; /* Creates 3 columns per row */
-    column-gap: 20%
-}
-
-.navigationbar {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-    position: sticky; /* Keeps navigation bar at the top even when scrolling */
-    top:0;
-    z-index: 1000; /*Keep bar on top of everything*/
-}
-
-.navigationbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 18px;
-}
-
-.navigationbar a:hover {  /* Style of navigation bar on hover */
-    background-color: #575757;
-}
-
-.image-container { /* Makes the image allow for overlap */
-  position: relative;
-  display: inline-block;
-}
-
-.image-container img { /* Makes the image allow for overlap */
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.overlay-text { /* Styles for text overlapping images */
-  position: absolute;
-  top: 50%; /* Centers the title */
-  left: 50%; /* Centers the title */
-  transform: translate(-50%, -50%);
-  color: #000000;
-  background-color: rgba(205, 205, 205, 0.5); /* Creates semi-transparent backdrop behind title */
-  padding: 10px 10px;
-  font-size: 40px
-}
-
-.logo {
-    display: flex;
-    position: sticky;
-    top: 55px;
-    right: 15px; 
-    float: right;
-    padding: 0px 0px;
-}
-
-</style>
 </head>
+
 <body>
-
-<div class="navigationbar">
-    <a href="#overviewpage">Overview</a>
-    <a href="#pricingpage">Pricing</a>
-    <a href="#aboutuspage">About Us</a>
-</div>
-
- <div class="logo">
-        <a href="#homepage"><img src="images\logo.png" alt="Website logo: UniVerse written in blue and purple" width="225" height="100"></a>
+    <div class="navigationbar">
+        <a href="#overviewpage">Overview</a>
+        <a href="#pricingpage">Pricing</a>
+        <a href="#aboutuspage">About Us</a>
     </div>
 
-<div class="blackpage" id="homepage">
+    <div class="logo">
+            <a href="#homepage"><img src="images\logo.png" alt="Website logo: UniVerse written in blue and purple" width="225" height="100"></a>
+        </div>
 
-    <div class="headerblack"><h1>UniVerse</h1> <! -- Change the title here. --></div>
-    <p style="color:antiquewhite; text-align:center; font-size: 25px">Universal Translation Glasses</p> <! -- Edit the description here. -->
-</div>
+    <div class="blackpage" id="homepage">
 
-<div class="whitepage" id="overviewpage">
-    <div class="headerwhite"><h2>What are Universal Translation Glasses?</h2> <! -- Change the title here. --></div>
-    <p style="color:black; text-align:center; font-size: 25px">Overview of product + features</p> <! -- Edit the description here. -->
-</div>
-
-<div class="blackpage" id="specspage">
-    <div class="headerblack"><h1>Designed for the future</h1> <! -- Change the title here. --></div>
-    <p style="color:antiquewhite; text-align:center; font-size: 25px">spec breakdown</p> <! -- Edit the description here. -->
-</div>
-
-<div class ="whitepage" id="advantagespage">
-    <div class="headerwhite"><h1>Unleash your full Potential</h1>!</div>
-</div>
-    
-<div class="blackpage" id="pricingpage">
-    <div class="headerblack"><h2>Pricing</h2> <! -- Change the title here. --></div>
-    <p style="color:white; text-align:center; font-size: 25px">different options</p> <! -- Edit the description here. -->
-</div>
-
-<div class="image-container" id="aboutuspage"> <! -- To change the header image, replace the file named "about_us_header" in the images folder. Will need to use CSS to reposition the image depending on the screen size and to have the title be place on top of the image. -->
-    <img src="images\about_us_header.jpg" alt="Group of employees collaborating" width="1518" height="238" class="center">
-    <div class="overlay-text">
-        <p style="color:black; text-align:left"><h1>About Us</h1> <! -- Edit the title here. --></p>
+        <div class="headerblack"><h1>UniVerse</h1> <! -- Change the title here. --></div>
+        <p style="color:antiquewhite; text-align:center; font-size: 25px">Universal Translation Glasses</p> <! -- Edit the description here. -->
     </div>
-</div>
 
-<div class="description"> <! -- To change the image beside the description, change the image labelled "team_img" in the images folder. -->
-    <img src="images\team_img.jpg" alt="Team members discussing" align="left" hspace="50" vspace="15">
-    <p style="color:black; font-size: 25px">Description of our team.
-    </p> <! -- Edit the description here. -->
-</div>
+    <div class="whitepage" id="overviewpage">
+        <div class="headerwhite"><h2>What are Universal Translation Glasses?</h2> <! -- Change the title here. --></div>
+        <p style="color:black; text-align:center; font-size: 25px">Overview of product + features</p> <! -- Edit the description here. -->
+    </div>
 
-<div class="profile">
-    <img src="images\person1.png" alt="Team member 1" width="100" height="100" hspace="70" vspace="10">
+    <div class="blackpage" id="specspage">
+        <div class="headerblack"><h1>Designed for the future</h1> <! -- Change the title here. --></div>
+        <p style="color:antiquewhite; text-align:center; font-size: 25px">spec breakdown</p> <! -- Edit the description here. -->
+    </div>
 
-    <h2>Team member 1 name</h2> <! -- Add your name here. -->
-    <p style="color:black; font-size: 20px">About team member 1</p> <! -- Edit the description of team member 1 here. -->
+    <div class ="whitepage" id="advantagespage">
+        <div class="headerwhite"><h1>Unleash your full Potential</h1>!</div>
+    </div>
+        
+    <div class="blackpage" id="pricingpage">
+        <div class="headerblack"><h2>Pricing</h2> <! -- Change the title here. --></div>
+        <p style="color:white; text-align:center; font-size: 25px">different options</p> <! -- Edit the description here. -->
+    </div>
 
-    <img src="images\person2.png" alt="Team member 2" width="100" height="100" hspace="70" vspace="10">
-
-    <h2>Team member 2 name</h2> <! -- Add your name here. -->
-    <p style="color:black; font-size: 20px">About team member 2</p> <! -- Edit the description of team member 2 here. -->
-
-    <img src="images\person3.png" alt="Team member 3" width="100" height="100" hspace="70" vspace="10">
-
-    <h2>Team member 3 name</h2> <! -- Add your name here. -->
-    <p style="color:black; font-size: 20px">About team member 3</p> <! -- Edit the description of team member 3 here. -->
-</div>
-
-<div class="profile">
-    <img src="images\person4.png" alt="Team member 1" width="100" height="100" hspace="70" vspace="10">
-
-    <h2>Team member 4 name</h2> <! -- Add your name here. -->
-    <p style="color:black; font-size: 20px">About team member 4</p> <! -- Edit the description of team member 4 here. -->
-
-    <img src="images\person5.png" alt="Team member 2" width="100" height="100" hspace="70" vspace="10">
-
-    <h2>Team member 5 name</h2> <! -- Add your name here. -->
-    <p style="color:black; font-size: 20px">About team member 5</p> <! -- Edit the description of team member 5 here. -->
-
-    <img src="images\person6.png" alt="Team member 6" width="100" height="100" hspace="70" vspace="10">
-
-    <h2>Team member 6 name</h2> <! -- Add your name here. -->
-    <p style="color:black; font-size: 20px">About team member 6</p> <! -- Edit the description of team member 6 here. -->
-</div>
-
-<div class="contact-form-container">
-    <h2>Contact Us</h2>
-    <form id="contactForm">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" 
-                   name="name" 
-                   placeholder="Your Name" required>
-            <span class="error-message" id="nameError"></span>
+    <div class="image-container" id="aboutuspage"> <! -- To change the header image, replace the file named "about_us_header" in the images folder. Will need to use CSS to reposition the image depending on the screen size and to have the title be place on top of the image. -->
+        <img src="images\about_us_header.jpg" alt="Group of employees collaborating" width="1518" height="238" class="center">
+        <div class="overlay-text">
+            <p style="color:black; text-align:left"><h1>About Us</h1> <! -- Edit the title here. --></p>
         </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" 
-                   name="email" 
-                   placeholder="Your Email" required>
-            <span class="error-message" id="emailError"></span>
-        </div>
-        <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" 
-                   name="phone" 
-                   placeholder="Your Phone Number" required>
-            <span class="error-message" id="phoneError"></span>
-        </div>
-        <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" 
-                      name="message" 
-                      placeholder="Your Message" 
-                      rows="5" required></textarea>
-            <span class="error-message" 
-                  id="messageError"></span>
-        </div>
-        <button type="submit" 
-                class="submit-button">
-          Send Message
-        </button>
-    </form>
-</div>
+    </div>
 
-<script type="text/javascript">
+    <div class="description"> <! -- To change the image beside the description, change the image labelled "team_img" in the images folder. -->
+        <img src="images\team_img.jpg" alt="Team members discussing" align="left" hspace="50" vspace="15">
+        <p style="color:black; font-size: 25px">Description of our team.
+        </p> <! -- Edit the description here. -->
+    </div>
 
-    document.getElementById('orderForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+    <div class="profile">
+        <img src="images\person1.png" alt="Team member 1" width="100" height="100" hspace="70" vspace="10">
 
-    // Clear previous errors
-    const errorElements = document.querySelectorAll('.error-message');
-    errorElements.forEach(el => el.style.display = 'none');
+        <h2>Team member 1 name</h2> <! -- Add your name here. -->
+        <p style="color:black; font-size: 20px">About team member 1</p> <! -- Edit the description of team member 1 here. -->
 
-    // Get form values
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const creditcard = document.getElementById('creditcard').value.trim();
-    const message = document.getElementById('request').value.trim();
+        <img src="images\person2.png" alt="Team member 2" width="100" height="100" hspace="70" vspace="10">
 
-    // Validation flags
-    let isValid = true;
+        <h2>Team member 2 name</h2> <! -- Add your name here. -->
+        <p style="color:black; font-size: 20px">About team member 2</p> <! -- Edit the description of team member 2 here. -->
 
-    // Name validation
-    if (name === '') {
-        document.getElementById('nameError').textContent = 'Name is required';
-        document.getElementById('nameError').style.display = 'block';
-        isValid = false;
-    }
+        <img src="images\person3.png" alt="Team member 3" width="100" height="100" hspace="70" vspace="10">
 
-    // Email validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email === '' || !emailPattern.test(email)) {
-        document.getElementById('emailError').textContent = 'Valid email is required';
-        document.getElementById('emailError').style.display = 'block';
-        isValid = false;
-    }
+        <h2>Team member 3 name</h2> <! -- Add your name here. -->
+        <p style="color:black; font-size: 20px">About team member 3</p> <! -- Edit the description of team member 3 here. -->
+    </div>
 
-    // Phone validation
-    const phonePattern = /^[0-9]{10}$/;
-    if (phone === '' || !phonePattern.test(phone)) {
-        document.getElementById('phoneError').textContent = 'Valid phone number is required';
-        document.getElementById('phoneError').style.display = 'block';
-        isValid = false;
-    }
+    <div class="profile">
+        <img src="images\person4.png" alt="Team member 1" width="100" height="100" hspace="70" vspace="10">
 
-    // Message validation
-    if (message === '') {
-        document.getElementById('messageError').textContent = 'Message is required';
-        document.getElementById('messageError').style.display = 'block';
-        isValid = false;
-    }
+        <h2>Team member 4 name</h2> <! -- Add your name here. -->
+        <p style="color:black; font-size: 20px">About team member 4</p> <! -- Edit the description of team member 4 here. -->
 
-    // If form is valid, you can submit it or perform any other action
-    if (isValid) {
-        alert('Form submitted successfully!');
-    }
-});
+        <img src="images\person5.png" alt="Team member 2" width="100" height="100" hspace="70" vspace="10">
 
-</script>
+        <h2>Team member 5 name</h2> <! -- Add your name here. -->
+        <p style="color:black; font-size: 20px">About team member 5</p> <! -- Edit the description of team member 5 here. -->
 
+        <img src="images\person6.png" alt="Team member 6" width="100" height="100" hspace="70" vspace="10">
+
+        <h2>Team member 6 name</h2> <! -- Add your name here. -->
+        <p style="color:black; font-size: 20px">About team member 6</p> <! -- Edit the description of team member 6 here. -->
+    </div>
+
+    <div class="contact-form-container">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" 
+                    name="name" 
+                    placeholder="Your Name" required>
+                <span class="error-message" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" 
+                    name="email" 
+                    placeholder="Your Email" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" 
+                    name="phone" 
+                    placeholder="Your Phone Number" required>
+                <span class="error-message" id="phoneError"></span>
+            </div>
+            <div class="form-group">
+                <label for="address">Shipping address</label>
+                <input type="text" id="address" 
+                    name="phone" 
+                    placeholder="Your Postal Code Number" required>
+                <span class="error-message" id="addressError"></span>
+            </div>
+            <div class="form-group">
+                <label for="concerns">Concerns</label>
+                <textarea id="concerns" 
+                        name="concerns" 
+                        placeholder="Anything else you'd like to add? Put it here!" 
+                        rows="5"></textarea>
+                <span class="error-message" id="concernsError"></span>
+            </div>
+            <button type="submit" 
+                    class="submit-button">
+            Send Message
+            </button>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+
+        document.getElementById('orderForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Clear previous errors
+        const errorElements = document.querySelectorAll('.error-message');
+        errorElements.forEach(el => el.style.display = 'none');
+
+        // Get form values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const address = document.getElementById('shipping address').value.trim();
+        const creditcard = document.getElementById('creditcard').value.trim();
+        const message = document.getElementById('request').value.trim();
+
+        // Validation flags
+        let isValid = true;
+
+        // Name validation
+        if (name === '') {
+            document.getElementById('nameError').textContent = 'Name is required';
+            document.getElementById('nameError').style.display = 'block';
+            isValid = false;
+        }
+
+        // Email validation
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email === '' || !emailPattern.test(email)) {
+            document.getElementById('emailError').textContent = 'Valid email is required';
+            document.getElementById('emailError').style.display = 'block';
+            isValid = false;
+        }
+
+        // Phone validation
+        const phonePattern = /^[0-9]{10}$/;
+        if (phone === '' || !phonePattern.test(phone)) {
+            document.getElementById('phoneError').textContent = 'Valid phone number is required';
+            document.getElementById('phoneError').style.display = 'block';
+            isValid = false;
+        }
+
+        // Shipping address validation
+        const addressPattern = /^([A-Z][0-9][A-Z])\s*([0-9][A-Z][0-9])$/; // Checks that a postal code was entered (by checking its formatting)
+        if (address === '' || !addressPattern.test(address)) {
+            document.getElementById('addressError').textContent = 'Valid shipping address is required';
+            document.getElementById('addressError').style.display = 'block';
+            isValid = false;
+        }
+
+        // If form is valid, you can submit it or perform any other action
+        if (isValid) {
+            alert('Form submitted successfully!');
+        }
+    });
+
+    </script>
 </body>
 </html>

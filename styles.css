@@ -72,6 +72,16 @@ body {
     background-color: #575757;
 }
 
+#languageSelector {
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 14px 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
 .image-container { /* Makes the image allow for overlap */
   position: relative;
   display: inline-block;

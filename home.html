@@ -161,9 +161,9 @@ inside. */ -->
         </div>
     </div>
 
-    <div class="order-form-container">
+    <div class="contact-form-container">
         <h2>Contact Us Here</h2>
-        <form id="orderForm">
+        <form id="contactForm">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" 
@@ -182,12 +182,12 @@ inside. */ -->
             <! -- Add deleted section here if we want to make this back into an order form -->
 
             <div class="form-group">
-                <label for="concerns">How can we help you?</label>
-                <textarea id="concerns" 
-                        name="concerns" 
+                <label for="message">How can we help you?</label>
+                <textarea id="message" 
+                        name="message" 
                         placeholder="Anything you'd like to share? Put it here!" 
                         rows="5" required></textarea>
-                <span class="error-message" id="concernsError"></span>
+                <span class="error-message" id="messageError"></span>
             </div>
             <button type="submit" 
                     class="submit-button"> 
@@ -217,7 +217,7 @@ inside. */ -->
 
         */
 
-        document.getElementById('orderForm').addEventListener('submit', function (event) {
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
         event.preventDefault();
 
         // Clear previous errors
@@ -230,7 +230,7 @@ inside. */ -->
         //const phone = document.getElementById('phone').value.trim();
         //const address = document.getElementById('shipping address').value.trim();
         //const creditcard = document.getElementById('creditcard').value.trim();
-        const message = document.getElementById('request').value.trim();
+        const message = document.getElementById('message').value.trim();
 
         // Validation flags
         let isValid = true;
@@ -270,6 +270,7 @@ inside. */ -->
 
         // If form is valid, you can submit it or perform any other action
         if (isValid) {
+            document.getElementById('contactForm').reset(); // Clear all input fields
             alert('Form submitted successfully!');
         }
     });

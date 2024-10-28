@@ -191,7 +191,7 @@ inside. */ -->
             </div>
             <button type="submit" 
                     class="submit-button"> 
-                    Send Message
+                    Submit
             </button>
         </form>
     </div>
@@ -216,6 +216,14 @@ inside. */ -->
             </div>
 
         */
+
+        // Determines whether any form fields are filled
+        function infoEntered() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            return name !== '' || email !== '' || message !== '';
+        }
 
         document.getElementById('contactForm').addEventListener('submit', function (event) {
         event.preventDefault();
@@ -272,6 +280,15 @@ inside. */ -->
         if (isValid) {
             document.getElementById('contactForm').reset(); // Clear all input fields
             alert('Form submitted successfully!');
+        }
+    });
+
+    window.addEventListener('beforeunload', function (event) {
+    // Checks if there is information entered in the form fields when user tries to close tab
+        if (infoEntered()) {
+            const leave = 'You have unsaved changes. Are you sure you want to leave?';
+            event.returnValue = leave; // For most browsers
+            return leave; // For older browsers
         }
     });
     </script>

@@ -19,7 +19,63 @@ inside. */ -->
         <a href="#pricingpage">Pricing</a>
         <a href="#aboutuspage">About Us</a>
         <a href="#contactuspage">Contact Us</a>
+        
+        <select id="languageSelector">
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="es">ES</option>
+        </select>
     </div>
+    
+    <script>
+        // languages translations
+        const translations = {
+            en: {
+                title: "UniVerse",
+                description: "Universal Translation Glasses",
+                overviewHeader: "What are Universal Translation Glasses?",
+                overviewDescription: "Overview of product + features",
+                pricingHeader: "Pricing",
+                contactUsHeader: "Contact Us",
+                contactUsMessage: "How can we help you?"
+            },
+            fr: {
+                title: "UniVerse",
+                description: "Lunettes de traduction universelles",
+                overviewHeader: "Qu'est-ce que les lunettes de traduction universelles?",
+                overviewDescription: "Aperçu du produit + caractéristiques",
+                pricingHeader: "Tarification",
+                contactUsHeader: "Contactez-Nous",
+                contactUsMessage: "Comment pouvons-nous vous aider?"
+            },
+            es: {
+                title: "UniVerse",
+                description: "Gafas de Traducción Universal",
+                overviewHeader: "¿Qué son las gafas de traducción universal?",
+                overviewDescription: "Descripción general del producto y características",
+                pricingHeader: "Precios",
+                contactUsHeader: "Contáctenos",
+                contactUsMessage: "¿Cómo podemos ayudarle?"
+            }
+        };
+
+        // Function to update the page based on the language that is selected
+        function updateLanguage(language) {
+            document.querySelector('.headerblack h1').textContent = translations[language].title;
+            document.querySelector('#homepage p').textContent = translations[language].description;
+            document.querySelector('#overviewpage h2').textContent = translations[language].overviewHeader;
+            document.querySelector('#overviewpage p').textContent = translations[language].overviewDescription;
+            document.querySelector('#pricingpage h2').textContent = translations[language].pricingHeader;
+            document.querySelector('#contactuspage h1').textContent = translations[language].contactUsHeader;
+            document.getElementById('concerns').placeholder = translations[language].contactUsMessage;
+        }
+
+        // Event Listener that updates the page when a language is selected
+        document.getElementById('languageSelector').addEventListener('change', (event) => {
+            const selectedLanguage = event.target.value;
+            updateLanguage(selectedLanguage);
+        });
+    </script>
 
     <div class="logo">
             <a href="#homepage"><img src="images\logo.png" alt="Website logo: UniVerse written in blue and purple" width="225" height="100"></a>
@@ -43,6 +99,7 @@ inside. */ -->
 
     <div class ="whitepage" id="advantagespage">
         <div class="headerwhite"><h1>Unleash your full Potential</h1>!</div>
+         <p style="color:black; text-align:center; font-size: 25px">
     </div>
         
     <div class="blackpage" id="pricingpage">
@@ -104,9 +161,9 @@ inside. */ -->
         </div>
     </div>
 
-    <div class="order-form-container">
+    <div class="contact-form-container">
         <h2>Contact Us Here</h2>
-        <form id="orderForm">
+        <form id="contactForm">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" 
@@ -125,16 +182,16 @@ inside. */ -->
             <! -- Add deleted section here if we want to make this back into an order form -->
 
             <div class="form-group">
-                <label for="concerns">How can we help you?</label>
-                <textarea id="concerns" 
-                        name="concerns" 
+                <label for="message">How can we help you?</label>
+                <textarea id="message" 
+                        name="message" 
                         placeholder="Anything you'd like to share? Put it here!" 
                         rows="5" required></textarea>
-                <span class="error-message" id="concernsError"></span>
+                <span class="error-message" id="messageError"></span>
             </div>
             <button type="submit" 
                     class="submit-button"> 
-                    Send Message
+                    Submit
             </button>
         </form>
     </div>
@@ -160,7 +217,15 @@ inside. */ -->
 
         */
 
-        document.getElementById('orderForm').addEventListener('submit', function (event) {
+        // Determines whether any form fields are filled
+        function infoEntered() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            return name !== '' || email !== '' || message !== '';
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
         event.preventDefault();
 
         // Clear previous errors
@@ -173,7 +238,7 @@ inside. */ -->
         //const phone = document.getElementById('phone').value.trim();
         //const address = document.getElementById('shipping address').value.trim();
         //const creditcard = document.getElementById('creditcard').value.trim();
-        const message = document.getElementById('request').value.trim();
+        const message = document.getElementById('message').value.trim();
 
         // Validation flags
         let isValid = true;
@@ -213,9 +278,93 @@ inside. */ -->
 
         // If form is valid, you can submit it or perform any other action
         if (isValid) {
+            document.getElementById('contactForm').reset(); // Clear all input fields
             alert('Form submitted successfully!');
         }
     });
+
+    window.addEventListener('beforeunload', function (event) {
+    // Checks if there is information entered in the form fields when user tries to close tab
+        if (infoEntered()) {
+            const leave = 'You have unsaved changes. Are you sure you want to leave?';
+            event.returnValue = leave; // For most browsers
+            return leave; // For older browsers
+        }
+    });
     </script>
+    
+    <footer style="background-color: #333; color: white; text-align: center; padding: 10px 0;">
+        <p><a href = "https://www.facebook.com/UniVerse" target ="_blank" area-label="Facebook"></a>
+        <a href = "https://www.instagram.com/UniVerse" target ="_blank" area-label="Instagram"></a>
+        <a href = "https://www.x.com/UniVerse" target ="_blank" area-label="X"></a>
+        <a href = "https://www.linkedin.com/UniVerse" target ="_blank" area-label="LinkedIn"></a></p>
+        &copy; 2024 UniVerse. All Rights Reserved.
+        <p><a href="UniVerse@gmail.ca" style="color:aliceblue";>UniVerse@gmail.com</a></p>
+        <p><div><a href="https://UniVerse.github.io" style="color: aliceblue;">Privacy Policy </a> | 
+        <a><a href="https://UniVerse.github.io" style="color: aliceblue;">Use of Cookies</a> |
+        <a href="https://UniVerse.github.io"style="color: aliceblue;"> Terms of Service </a></p>
+
+        <title>Newsletter Subscription</title>
+        <style>
+            /* Style the form */
+            form {
+                border: 4px solid #f1f1f1;
+            }
+    
+            /* Add some padding and a grey background color to containers */
+            .container {
+                padding: 20px;
+                background-color: #f1f1f1;
+                margin-bottom: 10px; /* Add some space between containers */
+            }
+    
+            /* Style the input elements and the submit button */
+            input[type=text], input[type=submit] {
+                width: 100%;
+                padding: 12px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+    
+            /* Add margins to the checkbox */
+            input[type=checkbox] {
+                margin-top: 16px;
+            }
+    
+            /* Style the submit button */
+            input[type=submit] {
+                background-color: #04AA6D;
+                color: white;
+                border: none;
+            }
+    
+            input[type=submit]:hover {
+                opacity: 0.8;
+            }
+        </style>
+        <form action="action_page.php">
+            <div class="container">
+              <h2>Subscribe to our Newsletter</h2>
+            </div>
+          
+            <div class="container" style="background-color:white">
+              <input type="text" placeholder="Name" name="name" required>
+              <input type="text" placeholder="Email address" name="mail" required>
+              <label>
+                <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+              </label>
+            </div>
+          
+            <div class="container">
+              <input type="submit" value="Subscribe">
+
+
+
+            </div>
+          </form>
+          
+    </footer>
 </body>
 </html>

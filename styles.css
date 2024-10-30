@@ -72,6 +72,16 @@ body {
     background-color: #575757;
 }
 
+#languageSelector {
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 14px 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
 .image-container { /* Makes the image allow for overlap */
   position: relative;
   display: inline-block;
@@ -110,9 +120,9 @@ body {
     float: right
 }
 
-/*Styles for order form*/
+/* Styles for contact form */
 
-.order-form-container {
+.contact-form-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -164,4 +174,21 @@ textarea {
 
 .submit-button:hover {
     background-color: #218838;
+}
+
+/* Style for the different options of pricing */
+.container {
+    display: flex;
+    gap: 150px;
+}
+
+.box{
+    width: 300px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 5px solid #333;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 2);
 }

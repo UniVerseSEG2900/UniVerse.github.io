@@ -12,3 +12,6 @@ Features:
 -AR translation icons to mimic signage 
 -Integration for hearing aids/Cochlear implants
 -Kids version available
+
+
+## testing push

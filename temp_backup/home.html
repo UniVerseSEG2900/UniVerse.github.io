@@ -1,0 +1,200 @@
+<! -- The main homepage of our website. This is the first page that the user will see when
+they click on the website link. Comments explain what can be edited to do what. -->
+<! -- Use this to write a comment. /* This is also a comment but only if the text is green 
+inside. */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>UniVerse</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    
+html {
+    scroll-behavior: smooth; /* Makes scrolling through the pages smooth */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.blackpage { /* Style of page with black background */
+    height: 600px; /* Size of page can be adjusted as more content get added */
+    background-color: black; 
+    border: 5px solid black;
+}
+
+.whitepage { /* Style of page with white background */
+    height: 600px; /* Size of page can be adjusted as more content get added */
+    background-color: #e9ebec; 
+    border: 5px solid #e9ebec;
+}
+
+.headerblack { /*Style of header on a black page */
+        padding-top:50px; 
+        padding-bottom:30px; 
+        color:white; 
+        font-size: 40px; 
+        text-align:center; 
+        font-weight: bold;
+}
+
+.headerwhite { /*Style of header on a white page */
+    padding-top:50px; 
+    padding-bottom:30px; 
+    color:black; 
+    font-size: 40px; 
+    text-align:center; 
+    font-weight: bold;
+}
+
+.description { /* Style of background for first description */
+    height: 300px; /* Size of description box */
+    background-color: grey;
+    border: 10px solid grey; 
+}
+
+.profile { /* Style of background for profile descriptions */
+    height: 250px; /* Size of each profile's section */
+    background-color: grey;
+    border: 50px solid grey;
+    width:405px;
+    float:left /* Creates invisible columns */
+}
+
+.navigationbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    position: sticky; /* Keeps navigation bar at the top even when scrolling */
+    top:0;
+    z-index: 1000; /*Keep bar on top of everything*/
+}
+
+.navigationbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+}
+
+.navigationbar a:hover {  /* Style of navigation bar on hover */
+    background-color: #575757;
+}
+
+.image-container { /* Makes the image allow for overlap */
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img { /* Makes the image allow for overlap */
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text { /* Styles for text overlapping images */
+  position: absolute;
+  top: 50%; /* Centers the title */
+  left: 50%; /* Centers the title */
+  transform: translate(-50%, -50%);
+  color: #000000;
+  background-color: rgba(205, 205, 205, 0.5); /* Creates semi-transparent backdrop behind title */
+  padding: 10px 10px;
+  font-size: 40px
+}
+
+</style>
+</head>
+<body>
+
+<div class="navigationbar">
+    <a href="#overviewpage">Overview</a>
+    <a href="#pricingpage">Pricing</a>
+    <a href="#aboutuspage">About Us</a>
+</div>
+
+<div class="blackpage" id="homepage">
+    <div class="headerblack"><h1>UniVerse</h1> <! -- Change the title here. --></div>
+    <p style="color:antiquewhite; text-align:center; font-size: 25px">Universal Translation Glasses</p> <! -- Edit the description here. -->
+</div>
+
+<div class="whitepage" id="overviewpage">
+    <div class="headerwhite"><h2>What are Universal Translation Glasses?</h2> <! -- Change the title here. --></div>
+    <p style="color:black; text-align:center; font-size: 25px">Overview of product + features</p> <! -- Edit the description here. -->
+</div>
+
+<div class="blackpage" id="specspage">
+    <div class="headerblack"><h1>Designed for the future</h1> <! -- Change the title here. --></div>
+    <p style="color:antiquewhite; text-align:center; font-size: 25px">spec breakdown</p> <! -- Edit the description here. -->
+</div>
+
+<div class ="blackpage" id="advantagespage">
+    <div class="headerblack"><h1>Unleash your full Potential</h1>!</div>
+</div>
+    
+<div class="whitepage" id="pricingpage">
+    <div class="headerwhite"><h2>Pricing</h2> <! -- Change the title here. --></div>
+    <p style="color:black; text-align:center; font-size: 25px">different options</p> <! -- Edit the description here. -->
+</div>
+
+<div class="image-container" id="aboutuspage"> <! -- To change the header image, replace the file named "about_us_header" in the images folder. Will need to use CSS to reposition the image depending on the screen size and to have the title be place on top of the image. -->
+    <img src="C:\Users\vasee\dev\web_projects\my_first_website\UniVerse.github.io\images\about_us_header.jpg" alt="Group of employees collaborating" width="1518" height="238" class="center">
+    <div class="overlay-text">
+        <p style="color:black; text-align:left"><h1>About Us</h1> <! -- Edit the title here. --></p>
+    </div>
+</div>
+
+<div class="description"> <! -- To change the image beside the description, change the image labelled "team_img" in the images folder. -->
+    <img src="C:\Users\vasee\dev\web_projects\my_first_website\UniVerse.github.io\images\team_img.jpg" alt="Team members discussing" align="left" hspace="50" vspace="15">
+    <p style="color:antiquewhite; font-size: 25px">Description of our team.
+    </p> <! -- Edit the description here. -->
+</div>
+
+<div class="profile">
+    <img src="C:\Users\vasee\dev\web_projects\my_first_website\UniVerse.github.io\images\person1.png" alt="Team member 1" width="100" height="100" hspace="70" vspace="10">
+
+    <h2>Team member 1 name</h2> <! -- Add your name here. -->
+    <p style="color:black; font-size: 20px">About team member 1</p> <! -- Edit the description of team member 1 here. -->
+</div>
+
+<div class="profile">
+    <img src="C:\Users\vasee\dev\web_projects\my_first_website\UniVerse.github.io\images\person2.png" alt="Team member 2" width="100" height="100" hspace="70" vspace="10">
+
+    <h2>Team member 2 name</h2> <! -- Add your name here. -->
+    <p style="color:black; font-size: 20px">About team member 2</p> <! -- Edit the description of team member 2 here. -->
+</div>
+
+<div class="profile">
+    <img src="C:\Users\vasee\dev\web_projects\my_first_website\UniVerse.github.io\images\person3.png" alt="Team member 3" width="100" height="100" hspace="70" vspace="10">
+
+    <h2>Team member 3 name</h2> <! -- Add your name here. -->
+    <p style="color:black; font-size: 20px">About team member 3</p> <! -- Edit the description of team member 3 here. -->
+</div>
+
+<div class="profile">
+    <img src="C:\Users\vasee\dev\web_projects\my_first_website\UniVerse.github.io\images\person4.png" alt="Team member 1" width="100" height="100" hspace="70" vspace="10">
+
+    <h2>Team member 4 name</h2> <! -- Add your name here. -->
+    <p style="color:black; font-size: 20px">About team member 4</p> <! -- Edit the description of team member 4 here. -->
+</div>
+
+<div class="profile">
+    <img src="C:\Users\vasee\dev\web_projects\my_first_website\UniVerse.github.io\images\person5.png" alt="Team member 2" width="100" height="100" hspace="70" vspace="10">
+
+    <h2>Team member 5 name</h2> <! -- Add your name here. -->
+    <p style="color:black; font-size: 20px">About team member 5</p> <! -- Edit the description of team member 5 here. -->
+</div>
+
+<div class="profile">
+    <img src="C:\Users\vasee\dev\web_projects\my_first_website\UniVerse.github.io\images\person6.png" alt="Team member 6" width="100" height="100" hspace="70" vspace="10">
+
+    <h2>Team member 6 name</h2> <! -- Add your name here. -->
+    <p style="color:black; font-size: 20px">About team member 6</p> <! -- Edit the description of team member 6 here. -->
+</div>
+
+</body>
+</html>

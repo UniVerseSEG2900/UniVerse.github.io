@@ -30,20 +30,58 @@ body {
 }
 
 .hometitle { 
-    padding-top: 120px;
+    padding-top: 60px;
+    padding-left: 100px;
     color: #595edd; 
-    font-size: 40px; 
-    text-align:center; 
+    font-size: 30px; 
+    text-align:left; 
     font-family: Comfortaa;
 }
 
 .homeemphasis { 
-    padding: 0px;
+    padding-right: 100px;
     color: white; 
-    font-size: 60px; 
+    font-size: 50px; 
+    text-align:right; 
+    font-weight: bold;
+    font-family: Comfortaa;
+}
+
+.homesub { 
+    padding-top: 0px;
+    position: relative;
+    bottom: 5%;
+    color: #52435e; /*alt colour: #2e2635 */
+    font-size: 15px; 
+    text-align:center; 
+    font-family: Comfortaa;
+}
+
+.homedesc { 
+    padding-top: 0px;
+    color: #4d3ebf; 
+    font-size: 35px; 
     text-align:center; 
     font-weight: bold;
     font-family: Comfortaa;
+}
+
+.headerrectangle{
+    position: absolute;
+    left: 5%;
+    bottom: 35px;
+    height: 700px;
+    width: 900px;
+    background-color: #8f91c4;
+    border-radius: 10px / 10px;
+}
+
+.headerrectangle2{
+    position: absolute;
+    bottom: 50px;
+    height: 235px;
+    width: 900px;
+    background-color: #8280b9;
 }
 
 .headerwhite { /*Style of header on a white page */
@@ -240,16 +278,6 @@ input[type=submit]:hover {
     margin: 10px;
     border-radius: 5px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 2);
-}
-
-.headerrectangle{
-    position: absolute;
-    left: 5%;
-    bottom: 35px;
-    height: 700px;
-    width: 900px;
-    background-color: #8f91c4;
-    border-radius: 10px / 10px;
 }
 
 .headerimg{

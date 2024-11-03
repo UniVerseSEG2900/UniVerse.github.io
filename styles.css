@@ -225,11 +225,6 @@ textarea {
     background-color: #218838;
 }
 
-/* Style for the different options of pricing */
-.home-container {
-    display: flex;
-    gap: 150px;
-}
 
 /* Style the form */
 form {

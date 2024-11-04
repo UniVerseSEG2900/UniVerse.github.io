@@ -160,7 +160,38 @@ body {
   font-size: 40px
 }
 
+.overview-backdrop-container { /* Makes the image allow for overlap */
+    position: relative;
+    display: inline-block;
+  }
+  
+  .overview-backdrop-container img { /* Makes the image allow for overlap */
+    display: block;
+    width: 133.25%;
+    height: auto;
+  }
+  
+  .overview-overlay-title { /* Styles for text overlapping images */
+    position: absolute;
+    top: 50%; /* Centers the title */
+    left: 50%; /* Centers the title */
+    transform: translate(-94%, -220%);
+    color: #ffffff;
+    background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind title */
+    padding: 0px 40px;
+    font-size: 30px
+  }
 
+  .overview-overlay-text { /* Styles for text overlapping images */
+    position: absolute;
+    top: 50%; /* Centers the text vertically */
+    left: 50%; /* Left alligns the text */
+    transform: translate(50%, 60%);
+    color: #ffffff;
+    background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind text */
+    padding: 10px 10px;
+    font-size: 25px
+  }
 
 .img {
     height: 200px; /* Size of each profile's section */

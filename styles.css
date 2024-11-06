@@ -163,13 +163,13 @@ body {
 .overview-backdrop-container { /* Makes the image allow for overlap */
     position: relative;
     display: inline-block;
-  }
+}
   
   .overview-backdrop-container img { /* Makes the image allow for overlap */
     display: block;
     width: 133.25%;
     height: auto;
-  }
+}
   
   .overview-overlay-title { /* Styles for text overlapping images */
     position: absolute;
@@ -180,7 +180,7 @@ body {
     background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind title */
     padding: 0px 40px;
     font-size: 30px
-  }
+}
 
   .overview-overlay-text { /* Styles for text overlapping images */
     position: absolute;
@@ -191,7 +191,7 @@ body {
     background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind text */
     padding: 10px 10px;
     font-size: 25px
-  }
+}
 
 .img {
     height: 200px; /* Size of each profile's section */

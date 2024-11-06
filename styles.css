@@ -5,16 +5,17 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .blackpage { /* Style of page with black background */
-    height: 1000px; /* Size of page can be adjusted as more content get added */
+    height: 100vh; /* Size of page can be adjusted as more content get added */
     background-color: black; 
     border: 5px solid black;
 }
 
 .whitepage { /* Style of page with white background */
-    height: 1000px; /* Size of page can be adjusted as more content get added */
+    height: 100vh; /* Size of page can be adjusted as more content get added */
     background-color: #e9ebec; 
     border: 5px solid #e9ebec;
 }
@@ -107,25 +108,127 @@ body {
     column-gap: 20%
 }
 
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1100;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8; /* Hover effect for the menu icon */
+}
+
+.hidden {
+    display: none;
+}
+
 .navigationbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2e2e2e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto; /* Auto height to fit the icons and language selector */
+    width: 80px;
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    border-top-right-radius: 15px; /* Curved corner for aesthetics */
+    border-bottom-right-radius: 15px; /* Curved corner for aesthetics */
+}
+
+.exit-button {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.exit-button:hover {
+    color: #595edd;
+}
+
+.navigationbar.active + .menu-icon {
+    opacity: 0; /* Fade out menu icon */
+    pointer-events: none; /* Disable interaction with hidden icon */
+}
+
+.navigationbar.active {
     display: flex;
-    justify-content: center;
-    background-color: #333;
-    position: sticky; /* Keeps navigation bar at the top even when scrolling */
-    top:0;
-    z-index: 1000; /*Keep bar on top of everything*/
+    transform: translateX(0);
 }
 
 .navigationbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 5px 0; /* Adjusted for more consistent spacing */
+    border-radius: 12px;
+    color: #cfcfcf;
+    transition: all 0.3s ease;
 }
 
-.navigationbar a:hover {  /* Style of navigation bar on hover */
-    background-color: #575757;
+.nav-icon {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+
+.navigationbar select {
+    margin-top: auto;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 60px;
+}
+
+.navigationbar a:hover {
+    background-color: #595edd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.navigationbar a:hover .nav-icon {
+    transform: scale(1.2);
+}
+
+.navigationbar select {
+    margin-top: 15px; /* Ensures it’s positioned well below the icons */
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 60px;
+    box-sizing: border-box; /* Ensures proper box model calculation */
+}
+
+.navigationbar select:hover {
+    background-color: #595edd;
+}
+
+.navigationbar.active {
+    transform: translateX(0); /* Slide in from the left */
 }
 
 #languageSelector {

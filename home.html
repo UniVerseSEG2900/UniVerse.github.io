@@ -15,18 +15,30 @@ inside. */ -->
 </head>
 
 <body>
-    <div class="navigationbar">
-        <a href="#overviewpage">Overview</a>
-        <a href="#pricingpage">Pricing</a>
-        <a href="#aboutuspage">About Us</a>
-        <a href="#contactuspage">Contact Us</a>
-        
+    <img src="Navbar%20icons/menu%20icon.png" alt="Menu" class="menu-icon" onclick="toggleSidebar()">
+    <div class="navigationbar" id="sidebar">
+        <button class="exit-button" onclick="toggleSidebar()">✕</button>
+        <a href="#overviewpage"><img src="Navbar%20icons/overview%20icon.png" alt="Overview" class="nav-icon"></a>
+        <a href="#pricingpage"><img src="Navbar%20icons/pricing%20icon.png" alt="Pricing" class="nav-icon"></a>
+        <a href="#aboutuspage"><img src="Navbar%20icons/aboutus%20icon.png" alt="About Us" class="nav-icon"></a>
+        <a href="#contactuspage"><img src="Navbar%20icons/contactus%20icon.png" alt="Contact Us" class="nav-icon"></a>
+
         <select id="languageSelector">
             <option value="en">EN</option>
             <option value="fr">FR</option>
             <option value="es">ES</option>
         </select>
     </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const menuIcon = document.querySelector(".menu-icon");
+
+            sidebar.classList.toggle("active");
+            menuIcon.classList.toggle("hidden");
+        }
+    </script>
     
     <script>
         // languages translations

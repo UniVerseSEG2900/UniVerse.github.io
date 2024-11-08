@@ -15,18 +15,30 @@ inside. */ -->
 </head>
 
 <body>
-    <div class="navigationbar">
-        <a href="#overviewpage">Overview</a>
-        <a href="#pricingpage">Pricing</a>
-        <a href="#aboutuspage">About Us</a>
-        <a href="#contactuspage">Contact Us</a>
-        
+    <img src="Navbar%20icons/menu%20icon.png" alt="Menu" class="menu-icon" onclick="toggleSidebar()">
+    <div class="navigationbar" id="sidebar">
+        <button class="exit-button" onclick="toggleSidebar()">✕</button>
+        <a href="#overviewpage"><img src="Navbar%20icons/overview%20icon.png" alt="Overview" class="nav-icon"></a>
+        <a href="#pricingpage"><img src="Navbar%20icons/pricing%20icon.png" alt="Pricing" class="nav-icon"></a>
+        <a href="#aboutuspage"><img src="Navbar%20icons/aboutus%20icon.png" alt="About Us" class="nav-icon"></a>
+        <a href="#contactuspage"><img src="Navbar%20icons/contactus%20icon.png" alt="Contact Us" class="nav-icon"></a>
+
         <select id="languageSelector">
             <option value="en">EN</option>
             <option value="fr">FR</option>
             <option value="es">ES</option>
         </select>
     </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const menuIcon = document.querySelector(".menu-icon");
+
+            sidebar.classList.toggle("active");
+            menuIcon.classList.toggle("hidden");
+        }
+    </script>
     
     <script>
         // languages translations
@@ -108,11 +120,33 @@ inside. */ -->
 
     <div class="blackpage" id="specspage">
         <div class="headerblack">
-            <h1 style= "text-align:right;">Designed for the future</h1> <! -- Change the title here. -->
-
+            <h1 style= 
+            "text-align:right;
+            font-size: 50px; 
+            font-family:Comfortaa;
+            margin-right: 100px;
+    "
+            >Design + Spec Breakdown
+        </h1> <! -- Change the title here. -->
         </div>
-        <p style="color:antiquewhite; text-align:right; font-size: 25px; font-family:Verdana">spec breakdown</p> <! -- Edit the description here. -->
+        <div class="rectangle">
+            Description
+        </div>
     </div>
+<style>
+    .rectangle {
+        position: absolute;
+        right:100px;
+        margin-top: -30px;
+        width: 800px;
+        height: 300px;
+        background-color: #595edd;
+        color: white;
+        text-align: center;
+        line-height: 100px; 
+        border-radius: 50px;
+    }
+</style>
 
     <div class ="whitepage" id="advantagespage">
         <div class="headerwhite"><h1>Unleash your full Potential</h1>!</div>
@@ -126,24 +160,31 @@ inside. */ -->
         <div class="styled-text">
             <center><h1>OPTION 1</h1></center> 
         </div>
-        <div class="styled-text1">
-            <center><h3>This option is available for children between 4 and 12 years old</h3></center> 
+        <center><h3>This option is available for children between 4 and 12 years old</h3></center>
+        <div class="styled-text">
+            <center><h2>250$</h2></center>
         </div>
-        <button>VIew more details</button>
+        <button>Order now</button>
     </div>
     <div class="box">
         <div class="styled-text">
             <center><h1>OPTION 2</h1></center>
         </div>
         <center><h3>This is the normal version for the adults and children over 12 years old</h3></center>
-        <button>View more details</button>
+        <div class="styled-text">
+            <center><h2>320$</h2></center>
+        </div>
+        <button>Order now</button>
     </div>
     <div class="box">
         <div class="styled-text">
             <center><h1>OPTION 3</h1></center>
         </div>
         <center><h3>This option is available for the seniors</h3></center>
-        <button>View more details</button>
+        <div class="styled-text">
+            <center><h2>400$</h2></center>
+        </div>
+        <button>Order now</button>
     </div>
 </div>
     </div>

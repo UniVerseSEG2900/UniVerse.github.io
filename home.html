@@ -11,6 +11,7 @@ inside. */ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
 </head>
 
 <body>
@@ -82,19 +83,35 @@ inside. */ -->
         </div>
 
     <div class="blackpage" id="homepage">
-
-        <div class="headerblack"><h1>UniVerse</h1> <! -- Change the title here. --></div>
-        <p style="color:antiquewhite; text-align:center; font-size: 25px">Universal Translation Glasses</p> <! -- Edit the description here. -->
+        <div class="home-container">
+            <img class="headerimg" src="images\personwearingglasses.jpg" alt="Woman wearing smart glasses">
+            <div class="headerrectangle">
+                <div class="hometitle"><h1>Unleash your full</h1> <! -- Change the title here. --></div>
+                <div class="homeemphasis"><h1>POTENTIAL</h1> <! -- Change the title here. --></div>
+                <div class="homesub"><h1>with</h1> <! -- Change the title here. --></div>
+                <div class="headerrectangle2">
+                <div class="homedesc"><h1>UniVersal Translation Glasses</h1> <! -- Change the title here. --></div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="whitepage" id="overviewpage">
-        <div class="headerwhite"><h2>What are Universal Translation Glasses?</h2> <! -- Change the title here. --></div>
-        <p style="color:black; text-align:center; font-size: 25px">Overview of product + features</p> <! -- Edit the description here. -->
+    <div class="overview-backdrop-container" id="overviewpage"> <! -- To change the header image, replace the background named "overview_backdrop" in the images folder. -->
+        <img src="images\overview_backdrop.jpg" alt="Tech specs image">
+        <div class="overview-overlay-title">
+            <h1>What are They?</h1> <! -- Edit the title here. -->
+        </div>
+        <div class="overview-overlay-text">
+            <h1>Overview of product + features</h1> <! -- Edit the text here. -->
+        </div>
     </div>
 
     <div class="blackpage" id="specspage">
-        <div class="headerblack"><h1>Designed for the future</h1> <! -- Change the title here. --></div>
-        <p style="color:antiquewhite; text-align:center; font-size: 25px">spec breakdown</p> <! -- Edit the description here. -->
+        <div class="headerblack">
+            <h1 style= "text-align:right;">Designed for the future</h1> <! -- Change the title here. -->
+
+        </div>
+        <p style="color:antiquewhite; text-align:right; font-size: 25px; font-family:Verdana">spec breakdown</p> <! -- Edit the description here. -->
     </div>
 
     <div class ="whitepage" id="advantagespage">
@@ -104,75 +121,101 @@ inside. */ -->
         
     <div class="blackpage" id="pricingpage">
         <div class="headerblack"><h2>Pricing</h2> <! -- Change the title here. --></div>
-        <p style="color:white; text-align:center; font-size: 25px">different options</p> <! -- Edit the description here. -->
+        <div class="container">
+    <div class="box">
+        <div class="styled-text">
+            <center><h1>OPTION 1</h1></center> 
+        </div>
+        <div class="styled-text1">
+            <center><h3>This option is available for children between 4 and 12 years old</h3></center> 
+        </div>
+        <button>VIew more details</button>
     </div>
-
+    <div class="box">
+        <div class="styled-text">
+            <center><h1>OPTION 2</h1></center>
+        </div>
+        <center><h3>This is the normal version for the adults and children over 12 years old</h3></center>
+        <button>View more details</button>
+    </div>
+    <div class="box">
+        <div class="styled-text">
+            <center><h1>OPTION 3</h1></center>
+        </div>
+        <center><h3>This option is available for the seniors</h3></center>
+        <button>View more details</button>
+    </div>
+</div>
+    </div>
+    
     <div class="image-container" id="aboutuspage"> <! -- To change the header image, replace the file named "about_us_header" in the images folder. -->
-        <img src="images\about_us_header.jpg" alt="Group of employees collaborating">
+        <img src="images/about_us_header1.png" style="filter: brightness(0.7); margin-bottom: -5px;" alt="Group of employees collaborating">
         <div class="overlay-text">
-            <p style="color:black; text-align:left"><h1>About Us</h1> <! -- Edit the title here. --></p>
+            <p style="color: white (255, 255, 255); text-align:left"><h1 style="color:white; font-family: 'Comfortaa';">About Us</h1> <! -- Edit the title here. --></p>
         </div>
     </div>
 
     <div class="description"> <! -- To change the image beside the description, change the image labelled "team_img" in the images folder. -->
-        <img src="images\team_img.jpg" alt="Team members discussing" align="left" hspace="50" vspace="15">
-        <p style="color:black; font-size: 25px">Description of our team.
+        <img src="images/about_us_description.jpg" alt="Team members discussing" style="width: 400px; height: auto; margin-top: 30px; margin-right: 50px; margin-bottom: 15px;" align="left">
+        <p style="color:white; font-size: 25px; margin-top: 50px; margin-left: 10px; font-family: 'Comfortaa';" align=middle>UniVerse Team 
         </p> <! -- Edit the description here. -->
+        <p style="color:white; font-size: 20px; margin-top: 30px; margin-left: 10px; font-family: 'Montserrat';" align=middle>description
+        </p>
     </div>
 
     <div class="profile">
         <img src="images\person1.png" alt="Team member 1" width="100" height="100" hspace="70" vspace="10">
 
-        <h2>Team member 1 name</h2> <! -- Add your name here. -->
-        <p style="color:black; font-size: 20px">About team member 1</p> <! -- Edit the description of team member 1 here. -->
+        <h2 style="font-size: 23px; font-family: 'Comfortaa'; color:white" align="center">Rayen Ben Tamarzizt</h2> <! -- Add your name here. -->
+        <p style="color:white; font-family: 'Montserrat'; font-size: 20px" align="center">About team member 1</p> <! -- Edit the description of team member 1 here. -->
 
         <img src="images\person2.png" alt="Team member 2" width="100" height="100" hspace="70" vspace="10">
 
-        <h2>Team member 2 name</h2> <! -- Add your name here. -->
-        <p style="color:black; font-size: 20px">About team member 2</p> <! -- Edit the description of team member 2 here. -->
+        <h2 style="font-size: 23px; font-family: 'Comfortaa'; color:white" align="center">Vaseeka Balachandiran</h2> <! -- Add your name here. -->
+        <p style="color:white; font-family: 'Montserrat'; font-size: 20px" align="center">About team member 2</p> <! -- Edit the description of team member 2 here. -->
 
         <img src="images\person3.png" alt="Team member 3" width="100" height="100" hspace="70" vspace="10">
 
-        <h2>Team member 3 name</h2> <! -- Add your name here. -->
-        <p style="color:black; font-size: 20px">About team member 3</p> <! -- Edit the description of team member 3 here. -->
+        <h2 style="font-size: 23px; font-family: 'Comfortaa'; color:white" align="center">Elizabeth Foley</h2> <! -- Add your name here. -->
+        <p style="color:white; font-family: 'Montserrat'; font-size: 20px" align="center">About team member 3</p> <! -- Edit the description of team member 3 here. -->
     </div>
 
     <div class="profile">
         <img src="images\person4.png" alt="Team member 1" width="100" height="100" hspace="70" vspace="10">
 
-        <h2>Team member 4 name</h2> <! -- Add your name here. -->
-        <p style="color:black; font-size: 20px">About team member 4</p> <! -- Edit the description of team member 4 here. -->
+        <h2 style="font-size: 23px; font-family: 'Comfortaa'; color:white" align="center">Felicia Nguyen</h2> <! -- Add your name here. -->
+        <p style="color:white; font-family: 'Montserrat'; font-size: 20px" align="center">About team member 4</p> <! -- Edit the description of team member 4 here. -->
 
         <img src="images\person5.png" alt="Team member 2" width="100" height="100" hspace="70" vspace="10">
 
-        <h2>Team member 5 name</h2> <! -- Add your name here. -->
-        <p style="color:black; font-size: 20px">About team member 5</p> <! -- Edit the description of team member 5 here. -->
+        <h2 style="font-size: 23px; font-family: 'Comfortaa'; color:white" align="center">Marven Monalliance</h2> <! -- Add your name here. -->
+        <p style="color:white; font-family: 'Montserrat'; font-size: 20px" align="center">About team member 5</p> <! -- Edit the description of team member 5 here. -->
 
         <img src="images\person6.png" alt="Team member 6" width="100" height="100" hspace="70" vspace="10">
 
-        <h2>Team member 6 name</h2> <! -- Add your name here. -->
-        <p style="color:black; font-size: 20px">About team member 6</p> <! -- Edit the description of team member 6 here. -->
+        <h2 style="font-size: 23px; font-family: 'Comfortaa'; color:white" align="center">Daniel Diaoussie</h2> <! -- Add your name here. -->
+        <p style="color:white; font-family: 'Montserrat'; font-size: 20px" align="center">About team member 6</p> <! -- Edit the description of team member 6 here. -->
     </div>
 
     <div class="image-container" id="contactuspage"> <! -- To change the header image, replace the file named "contact_header" in the images folder. -->
-        <img src="images\contact_header.jpg" alt="Group of employees collaborating">
+        <img src="images/contact_uspic.png" style="filter: brightness(0.7)" alt="Group of employees collaborating">
         <div class="overlay-text">
-            <p style="color:black; text-align:left"><h1>Contact Us</h1> <! -- Edit the title here. --></p>
+            <p style="color: white; text-align:left"><h1 style="color:white; font-family: 'Comfortaa';">Contact Us</h1> <! -- Edit the title here. --></p>
         </div>
     </div>
 
     <div class="contact-form-container">
-        <h2>Contact Us Here</h2>
+        <h2 style= "font-family: 'Comfortaa'";>Contact Form</h2>
         <form id="contactForm">
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name" style ="font-family: 'Montserrat'; font-size: 20px;">Name</label>
                 <input type="text" id="name" 
                     name="name" 
                     placeholder="Your Name" required>
                 <span class="error-message" id="nameError"></span>
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email" style ="font-family: 'Montserrat'; font-size: 20px;">Email</label>
                 <input type="email" id="email" 
                     name="email" 
                     placeholder="Your Email" required>
@@ -182,7 +225,7 @@ inside. */ -->
             <! -- Add deleted section here if we want to make this back into an order form -->
 
             <div class="form-group">
-                <label for="message">How can we help you?</label>
+                <label for="message" style ="font-family: 'Montserrat'; font-size: 20px;">How can we help you?</label>
                 <textarea id="message" 
                         name="message" 
                         placeholder="Anything you'd like to share? Put it here!" 
@@ -293,28 +336,12 @@ inside. */ -->
     });
     </script>
     
-    <footer style="background-color: #333; color: white; text-align: center; padding: 10px 0;">
-        <p><a href = "https://www.facebook.com/UniVerse" target ="_blank" area-label="Facebook"></a>
-        <a href = "https://www.instagram.com/UniVerse" target ="_blank" area-label="Instagram"></a>
-        <a href = "https://www.x.com/UniVerse" target ="_blank" area-label="X"></a>
-        <a href = "https://www.linkedin.com/UniVerse" target ="_blank" area-label="LinkedIn"></a></p>
-        &copy; 2024 UniVerse. All Rights Reserved.
-        <p><a href="UniVerse@gmail.ca" style="color:aliceblue";>UniVerse@gmail.com</a></p>
-        <p><div><a href="https://UniVerse.github.io" style="color: aliceblue;">Privacy Policy </a> | 
-        <a><a href="https://UniVerse.github.io" style="color: aliceblue;">Use of Cookies</a> |
-        <a href="https://UniVerse.github.io"style="color: aliceblue;"> Terms of Service </a></p>
-
+    <footer style="background-color: #333; color: white; text-align: center; padding: 10px 0; font-family: Verdana">
         <title>Newsletter Subscription</title>
-        <style>
-            /* Style the form */
-            form {
-                border: 4px solid #f1f1f1;
-            }
-    
+        <style>    
             /* Add some padding and a grey background color to containers */
             .container {
                 padding: 20px;
-                background-color: #f1f1f1;
                 margin-bottom: 10px; /* Add some space between containers */
             }
     
@@ -324,14 +351,9 @@ inside. */ -->
                 padding: 12px;
                 margin: 8px 0;
                 display: inline-block;
-                border: 1px solid #ccc;
-                box-sizing: border-box;
             }
     
             /* Add margins to the checkbox */
-            input[type=checkbox] {
-                margin-top: 16px;
-            }
     
             /* Style the submit button */
             input[type=submit] {
@@ -346,25 +368,26 @@ inside. */ -->
         </style>
         <form action="action_page.php">
             <div class="container">
-              <h2>Subscribe to our Newsletter</h2>
+              <h2>Stay connected with UniVerse!</h2>
             </div>
           
-            <div class="container" style="background-color:white">
+            <div class="container" style=" font-family: Verdana;">
               <input type="text" placeholder="Name" name="name" required>
               <input type="text" placeholder="Email address" name="mail" required>
-              <label>
-                <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
-              </label>
             </div>
           
-            <div class="container">
+            <div class="newsletter-container">
               <input type="submit" value="Subscribe">
 
 
 
             </div>
           </form>
-          
+
+        Copyright &copy; 2024 UniVerse. All Rights Reserved.
+        <p><div><a href="https://UniVerse.github.io" style="color: aliceblue;">Privacy Policy</a> | 
+        <a><a href="https://UniVerse.github.io" style="color: aliceblue;">Use of Cookies</a> |
+        <a href="https://UniVerse.github.io"style="color: aliceblue;"> Terms of Service </a></p>
     </footer>
 </body>
 </html>

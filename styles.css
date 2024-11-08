@@ -453,4 +453,7 @@ input[type=submit]:hover {
     z-index: 800;
 }
 
+.styled-text{
+        color: #595edd;
+    }
 

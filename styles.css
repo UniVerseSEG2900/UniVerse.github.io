@@ -278,21 +278,23 @@ body {
     position: absolute;
     top: 50%; /* Centers the title */
     left: 50%; /* Centers the title */
-    transform: translate(-94%, -220%);
+    transform: translate(-94%, -90%);
     color: #ffffff;
     background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind title */
     padding: 0px 40px;
-    font-size: 30px
+    font-family: Comfortaa;
+    font-size: 25px
 }
 
   .overview-overlay-text { /* Styles for text overlapping images */
     position: absolute;
     top: 50%; /* Centers the text vertically */
     left: 50%; /* Left alligns the text */
-    transform: translate(50%, 60%);
+    transform: translate(55%, 10%);
     color: #ffffff;
     background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind text */
     padding: 10px 10px;
+    font-family: Montserrat;
     font-size: 25px
 }
 

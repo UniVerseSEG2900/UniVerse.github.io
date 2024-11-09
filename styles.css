@@ -350,4 +350,9 @@ input[type=submit]:hover {
     z-index: 800;
 }
 
+.hero_container{
+    display: flex ;
+    width: 100%;
+}
+
 

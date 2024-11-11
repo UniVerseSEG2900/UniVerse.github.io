@@ -420,9 +420,16 @@ input[type=submit]:hover {
         flex-direction: column;
         justify-content: space-between;
         height: 250px;
-        text-align: center;
-        
+        text-align: center; 
+        align-items: center;
+        overflow: hidden;
     }
+    .box img {
+        width: 100%;  /* Ajuste l'image à la largeur de la box */
+        height: auto; /* Garde le ratio de l'image */
+    }
+    
+
 
     /* Style for the button of pricing */
     .box button {

@@ -419,7 +419,7 @@ input[type=submit]:hover {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 270px;
+        height: 400px;
         text-align: center; 
         background-size: cover;       
         background-position: center;  

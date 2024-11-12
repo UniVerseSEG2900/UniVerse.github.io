@@ -451,6 +451,10 @@ input[type=submit]:hover {
     .box button:hover {
         background-color: #0056b3;
     }
+    .box img {
+        width: 100%;  
+        height: auto; 
+    }
 
 .headerimg{
     border-radius: 10px / 10px;

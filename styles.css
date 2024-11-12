@@ -421,13 +421,20 @@ input[type=submit]:hover {
         justify-content: space-between;
         height: 250px;
         text-align: center; 
-        align-items: center;
-        overflow: hidden;
+        background-size: cover;       
+        background-position: center;  
+        background-repeat: no-repeat;
     }
-    .box img {
-        width: 100%;  /* Ajuste l'image à la largeur de la box */
-        height: auto; /* Garde le ratio de l'image */
+    .box1 {
+        background-image: url('images/children.jpg');
     }
+    .box2 {
+        background-image: url('images/adults.jpg');
+    }
+    .box3 {
+        background-image: url('images/seniors.jpg');
+    }
+    
     
 
 

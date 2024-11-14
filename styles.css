@@ -426,28 +426,34 @@ input[type=submit]:hover {
         background-repeat: no-repeat;
     }
     .box1 {
-        background-image: url('images/children.jpg');
+        width: 30%;
+        height: 65%;
+        background-color: #8f91c4;
+        border-color: #595edd;
+        border-width: 7px;
         background-size: cover;
         background-position: center;
         filter: brightness(95%);
         padding: 20px;
     }
-    .box1::before{
-        content: "";
+
+    .rectanglepricing {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: inherit;
-        filter: blur(2px);
-        z-index: -1;
+        bottom: 50px;
+        height: 235px;
+        width: 900px;
+        background-color: #8280b9;
     }
+
     .box1 .content {
         position: relative;
     }
     .box2 {
-        background-image: url('images/adults1.jpg');
+        width: 30%;
+        height: 65%;
+        background-color: #8f91c4;
+        border-color: #595edd;
+        border-width: 7px;
         background-size: cover;
         background-position: center;
         filter: brightness(95%);
@@ -468,7 +474,11 @@ input[type=submit]:hover {
         position: relative;
     }
     .box3 {
-        background-image: url('images/seniors1.jpg');
+        width: 30%;
+        height: 65%;
+        background-color: #8f91c4;
+        border-color: #595edd;
+        border-width: 7px;
         background-size: cover;
         background-position: center;
         filter: brightness(95%);
@@ -502,6 +512,7 @@ input[type=submit]:hover {
 
     .box button:hover {
         background-color: #0056b3;
+        transform: scale(1.2);
     }
     .box img {
         width: 100%;  
@@ -529,5 +540,5 @@ input[type=submit]:hover {
 .styled-text{
         color: #595edd;
     }
->>>>>>> 30be911dcc38e1c52c0edd5239e46db4a8de1d54
+/** >>>>>>> 30be911dcc38e1c52c0edd5239e46db4a8de1d54 what is this?? /***
 

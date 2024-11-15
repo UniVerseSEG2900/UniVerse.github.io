@@ -20,4 +20,4 @@ Team members:
 - Elizabeth Foley
 - Felicia Nguyen
 - Marven Monalliance
-- Daniel Diaoussie
+- Daniel Diaoussié

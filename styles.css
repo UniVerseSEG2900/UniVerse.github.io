@@ -251,7 +251,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-
 .navigationbar select {
     margin-top: auto;
     background-color: #333;
@@ -429,44 +428,121 @@ textarea {
     ;
 }
 
-
-
-/* Style the form */
-form {
-    border: 4px solid #f1f1f1;
-}
-
-/* Add some padding and a grey background color to containers */
-.newsletter-container {
+/*Styles the footer and newsletter*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 20px;
-    background-color: #f1f1f1;
-    margin-bottom: 10px; /* Add some space between containers */
+    margin-top: 80px; /*Determines the spacing between the contact form and newsletter*/
+    background-color: #595edd;
+    color: aliceblue;
+    flex-wrap: wrap;
+    /*border-radius: 50% 10rem; /*Creates a bubbly shaped text box. Might be useful somewhere else?*/
+    border-top-left-radius: 50% 10rem; /*Creates the curved effect on the top*/
+    border-top-right-radius: 50% 10rem; /*Creates the curved effect on the top*/
+    font-family: Comfortaa;
+
+    /*Transition*/
+    transform: translateY(50%); /* Start off-screen at the bottom */
+    opacity: 0; /* Fully transparent */
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out; /* Smooth transition */
 }
 
-/* Style the input elements and the submit button */
-input[type=text], input[type=submit] {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+/* Visible state (when scrolled into view) */
+.footer.show {
+    transform: translateY(0); /* Move into place */
+    opacity: 1; /* Fully visible */
 }
 
-/* Add margins to the checkbox */
-input[type=checkbox] {
-    margin-top: 16px;
+.footer div {
+    position: relative;
+    left: 33%;
+    flex: 1;
+    margin: 10px;
+    max-width: 30%; /*Adjust the width here*/
 }
 
-/* Style the submit button */
-input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
+.footer h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px; /*Adjust row spacing*/
+}
+
+.footer p {
+    text-align: center;
+    font-size: 1.1em;
+    margin: 5px 0;
+    margin-bottom: 8px /*Adjust row spacing*/
+}
+
+.newsletter form {
+    display: flex;
+    margin-top: 20px; /*Adjust row spacing*/
+    margin-bottom: 40px /*Adjust row spacing*/
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    flex: 1;
     border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
 }
 
-input[type=submit]:hover {
-    opacity: 0.8;
+.newsletter button {
+    padding: 10px 20px;
+
+    color: #595edd;
+    background-color: #ddd;
+
+    border-color: aliceblue;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+    background-color: #676be6;
+    color: aliceblue;
+}
+
+.copyright-section {
+    position: relative; /* Keeps the box in place */
+    width: 348%; /* Full viewport width */
+    height: auto;
+    left: -122.5%;
+    background-color: #3c409f;
+    padding: 20px 0; /* Add vertical spacing inside */
+    display: flex; /* Use Flexbox for alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    box-sizing: border-box; /* Includes padding in width/height calculation */
+    font-family: serif
+}
+
+.copyright-section a {
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+.copyright-section a:hover {
+    color: #595edd;
+    background-color: aliceblue;
+    text-decoration: none;
+}
+
+/*Applies a restrictive width feature when screen is small enough to make it adaptable to different screen sizes*/
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer div {
+        max-width: none;
+    }
 }
 
 /* Style for the boxes of pricing */

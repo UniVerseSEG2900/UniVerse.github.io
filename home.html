@@ -405,60 +405,45 @@ inside. */ -->
     });
     </script>
     
-    <footer style="background-color: #333; color: white; text-align: center; padding: 10px 0; font-family: Verdana">
-        <title>Newsletter Subscription</title>
-        <style>    
-            /* Add some padding and a grey background color to containers */
-            .container {
-                padding: 20px;
-                margin-bottom: 10px; /* Add some space between containers */
-            }
+    <footer class="footer">
+        <div class="newsletter">
+            <h3>Want to Stay Updated?</h3>
+            <p>Sign up for our newsletter today.</p>
+            <form>
+                <input type="email" placeholder="Email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
     
-            /* Style the input elements and the submit button */
-            input[type=text], input[type=submit] {
-                width: 100%;
-                padding: 12px;
-                margin: 8px 0;
-                display: inline-block;
-            }
-    
-            /* Add margins to the checkbox */
-    
-            /* Style the submit button */
-            input[type=submit] {
-                background-color: #04AA6D;
-                color: white;
-                border: none;
-            }
-    
-            input[type=submit]:hover {
-                opacity: 0.8;
-            }
-        </style>
-        <form action="action_page.php">
-            <div class="container">
-              <h2>Stay connected with UniVerse!</h2>
-            </div>
-          
-            <div class="container" style=" font-family: Verdana;">
-              <input type="text" placeholder="Name" name="name" required>
-              <input type="text" placeholder="Email address" name="mail" required>
-            </div>
-          
-            <div class="newsletter-container">
-              <input type="submit" value="Subscribe">
-
-
-
-            </div>
-          </form>
-
-        Copyright &copy; 2024 UniVerse. All Rights Reserved.
-        <p>
-            <a class="footer-link" href="https://UniVerse.github.io" style="color: aliceblue">Privacy Policy</a-footer-link> | 
-            <a class="footer-link" href="https://UniVerse.github.io" style="color: aliceblue">Use of Cookies</a-footer-link> |
-            <a class="footer-link" href="https://UniVerse.github.io" style="color: aliceblue"> Terms of Service</a-footer-link>
-        </p>
+            <copyright-section class="copyright-section">
+                <p style="font-size: 0.95em">Copyright &copy; 2024 UniVerse. All Rights Reserved.</p>
+                <p style="font-size: 0.9em">
+                    <a href="https://UniVerse.github.io">Privacy Policy</a> | 
+                    <a href="https://UniVerse.github.io">Use of Cookies</a> |
+                    <a href="https://UniVerse.github.io"> Terms of Service</a>
+                </p>
+            </copyright-section>
+        </div>
     </footer>
+
+    <script>
+        //Makes the footer slide into the screen when the user scrolls to the bottom
+        document.addEventListener("DOMContentLoaded", () => {
+            const footer = document.querySelector('.footer');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        footer.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            observer.observe(footer);
+        });
+    </script>
+    
 </body>
 </html>

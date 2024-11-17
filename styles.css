@@ -329,36 +329,38 @@ body {
 .overview-backdrop-container { /* Makes the image allow for overlap */
     position: relative;
     display: inline-block;
+    width: 100%;
+    height: auto
 }
   
   .overview-backdrop-container img { /* Makes the image allow for overlap */
     display: block;
-    width: 133.25%;
+    width: 100%;
     height: auto;
 }
   
   .overview-overlay-title { /* Styles for text overlapping images */
     position: absolute;
-    top: 50%; /* Centers the title */
+    top: 45%; /* Centers the title */
     left: 50%; /* Centers the title */
     transform: translate(-94%, -90%);
     color: #ffffff;
     background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind title */
     padding: 0px 40px;
     font-family: Comfortaa;
-    font-size: 25px
+    font-size: 24px
 }
 
   .overview-overlay-text { /* Styles for text overlapping images */
     position: absolute;
     top: 50%; /* Centers the text vertically */
     left: 50%; /* Left alligns the text */
-    transform: translate(55%, 10%);
+    transform: translate(-7%, 55%);
     color: #ffffff;
     background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind text */
     padding: 10px 10px;
     font-family: Montserrat;
-    font-size: 25px
+    font-size: 20px
 }
 
 .img {
@@ -474,7 +476,7 @@ input[type=submit]:hover {
 
     /* Style for every box for pricing*/
     .box {
-        width: 30%; 
+        width: 30%;
         padding: 20px;
         border: 1px solid #ccc;
         border-radius: 8px;
@@ -513,7 +515,7 @@ input[type=submit]:hover {
     }
     .box2 {
         width: 30%;
-        height: 65%;
+        height: 75%;
         background-color: #8f91c4;
         border-color: #595edd;
         border-width: 7px;
@@ -538,7 +540,7 @@ input[type=submit]:hover {
     }
     .box3 {
         width: 30%;
-        height: 65%;
+        height: 85%;
         background-color: #8f91c4;
         border-color: #595edd;
         border-width: 7px;
@@ -573,6 +575,11 @@ input[type=submit]:hover {
         cursor: pointer;
     }
 
+    a-footer-link:hover {
+        background-color: rgb(145, 140, 213);
+    }
+
+    /*Highlights the links at the bottom of our page when the user hovers over them*/
     .box button:hover {
         background-color: #0056b3;
         transform: scale(1.2);

@@ -20,6 +20,42 @@ body {
     border: 5px solid #e9ebec;
 }
 
+  @keyframes slideInfromRight { /* Animation to make something slide in from the right of screen. */
+    0% {
+      transform: translateX(500px) scale(.2);
+    }
+    100% {
+      transform: translateX(0px) scale(1);
+    }
+  }
+
+  @keyframes slideInfromLeft { /* Animation to make something slide in from the left of screen. */
+    0% {
+      transform: translateX(-500px) scale(.2);
+    }
+    100% {
+      transform: translateX(0px) scale(1);
+    }
+  }
+  
+  @keyframes slideUp { /* Animation to make something slide in from the bottom of screen. */
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes expand { /* Animation to make something get bigger screen. */
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
 .headerblack { /*Style of header on a black page */
         padding-top:50px; 
         padding-bottom:30px; 
@@ -75,6 +111,7 @@ body {
     width: 900px;
     background-color: #8f91c4;
     border-radius: 10px / 10px;
+    animation: slideInfromLeft .3s ease-in-out forwards; 
 }
 
 .headerrectangle2{
@@ -83,6 +120,32 @@ body {
     height: 235px;
     width: 900px;
     background-color: #8280b9;
+}
+
+.designimg {
+    width:30%;
+    height:auto;
+    bottom: 450px; 
+    left: 850px; 
+    position: relative;
+    z-index:2;
+    opacity:0.7;
+    border-radius: 10px;
+}
+
+.designimg-animation{
+    animation: slideInfromRight .3s ease-in-out forwards; 
+}
+
+.designrectangle {
+    position: relative;
+    width: 550px;
+    height: 550px;
+    background-color: #595edd;
+    bottom:950px;
+    left:800px;
+    opacity: 0.3;
+    border-radius: 10px;
 }
 
 .headerwhite { /*Style of header on a white page */
@@ -266,36 +329,38 @@ body {
 .overview-backdrop-container { /* Makes the image allow for overlap */
     position: relative;
     display: inline-block;
+    width: 100%;
+    height: auto
 }
   
   .overview-backdrop-container img { /* Makes the image allow for overlap */
     display: block;
-    width: 133.25%;
+    width: 100%;
     height: auto;
 }
   
   .overview-overlay-title { /* Styles for text overlapping images */
     position: absolute;
-    top: 50%; /* Centers the title */
+    top: 45%; /* Centers the title */
     left: 50%; /* Centers the title */
     transform: translate(-94%, -90%);
     color: #ffffff;
     background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind title */
     padding: 0px 40px;
     font-family: Comfortaa;
-    font-size: 25px
+    font-size: 24px
 }
 
   .overview-overlay-text { /* Styles for text overlapping images */
     position: absolute;
     top: 50%; /* Centers the text vertically */
     left: 50%; /* Left alligns the text */
-    transform: translate(55%, 10%);
+    transform: translate(-7%, 55%);
     color: #ffffff;
     background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind text */
     padding: 10px 10px;
     font-family: Montserrat;
-    font-size: 25px
+    font-size: 20px
 }
 
 .img {
@@ -414,7 +479,7 @@ input[type=submit]:hover {
 
     /* Style for every box for pricing*/
     .box {
-        width: 30%; 
+        width: 30%;
         padding: 20px;
         border: 1px solid #ccc;
         border-radius: 8px;
@@ -453,7 +518,7 @@ input[type=submit]:hover {
     }
     .box2 {
         width: 30%;
-        height: 65%;
+        height: 75%;
         background-color: #8f91c4;
         border-color: #595edd;
         border-width: 7px;
@@ -478,7 +543,7 @@ input[type=submit]:hover {
     }
     .box3 {
         width: 30%;
-        height: 65%;
+        height: 100%;
         background-color: #8f91c4;
         border-color: #595edd;
         border-width: 7px;
@@ -513,6 +578,11 @@ input[type=submit]:hover {
         cursor: pointer;
     }
 
+    a-footer-link:hover {
+        background-color: rgb(145, 140, 213);
+    }
+
+    /*Highlights the links at the bottom of our page when the user hovers over them*/
     .box button:hover {
         background-color: #0056b3;
         transform: scale(1.2);
@@ -529,6 +599,7 @@ input[type=submit]:hover {
     left: 30%;
     height: 50%;
     width: 65%;
+    animation: slideInfromRight .3s ease-in-out forwards;
 }
 
 .logo {

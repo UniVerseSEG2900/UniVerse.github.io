@@ -413,7 +413,6 @@ input[type=submit]:hover {
 
     /* Style for every box for pricing*/
     .box {
-        width: 30%; 
         padding: 20px;
         border: 1px solid #ccc;
         border-radius: 8px;

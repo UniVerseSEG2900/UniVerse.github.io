@@ -601,7 +601,7 @@ input[type=submit]:hover {
 
 .logo {
     position: sticky;
-    top: 55px;
+    top: 5px;
     right: 15px; 
     float: right;
     padding: 0px 0px;

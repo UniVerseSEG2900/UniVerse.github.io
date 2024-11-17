@@ -512,7 +512,7 @@ input[type=submit]:hover {
         cursor: pointer;
     }
 
-    a-footer-link:hover {
+    a.footer-link:hover {
         background-color: rgb(145, 140, 213);
     }
 
@@ -535,13 +535,39 @@ input[type=submit]:hover {
     width: 65%;
 }
 
+/*
 .logo {
     position: sticky;
     top: 55px;
     right: 15px; 
     float: right;
     padding: 0px 0px;
-    z-index: 800;
+    z-index: 800;  
+}
+
+a.logo-style:hover {
+    height: 125;
+    width: 250
+}
+    */
+
+.image-hover {
+    position: sticky;
+    top: 55px;
+    right: 15px; 
+    float: right;
+    padding: 0px 0px;
+    z-index: 800;  
+    
+    width: 225px; /* Specify the width */
+    height: 125px; /* Specify the height */
+    background-image: "images\logo.png"; /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+.image-hover:hover {
+    background-image: url('hover-image.jpg'); /* Change on hover */
 }
 
 .styled-text{

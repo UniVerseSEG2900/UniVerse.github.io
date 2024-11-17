@@ -266,11 +266,13 @@ body {
 .overview-backdrop-container { /* Makes the image allow for overlap */
     position: relative;
     display: inline-block;
+    width: 100%;
+    height: auto
 }
   
   .overview-backdrop-container img { /* Makes the image allow for overlap */
     display: block;
-    width: 133.25%;
+    width: 100%;
     height: auto;
 }
   
@@ -510,6 +512,11 @@ input[type=submit]:hover {
         cursor: pointer;
     }
 
+    a-footer-link:hover {
+        background-color: rgb(145, 140, 213);
+    }
+
+    /*Highlights the links at the bottom of our page when the user hovers over them*/
     .box button:hover {
         background-color: #0056b3;
         transform: scale(1.2);

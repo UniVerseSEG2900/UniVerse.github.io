@@ -92,7 +92,7 @@ inside. */ -->
         });
     </script>
 
-    <div class="logo">
+    <div class="image-hover">
             <a href="#homepage"><img src="images\logo.png" alt="Website logo: UniVerse written in blue and purple" width="225" height="100"></a>
         </div>
 
@@ -270,27 +270,34 @@ inside. */ -->
         <h2 style= "font-family: 'Comfortaa'";>Contact Form</h2>
         <form id="contactForm">
             <div class="form-group">
-                <label for="name" style ="font-family: 'Montserrat'; font-size: 20px;">Name</label>
+                <label for="name" style ="font-family: 'Montserrat'; font-size: 20px;"></label>
                 <input type="text" id="name" 
                     name="name" 
+                    font-family="Montserrat"
                     placeholder="Your Name" required>
                 <span class="error-message" id="nameError"></span>
             </div>
             <div class="form-group">
-                <label for="email" style ="font-family: 'Montserrat'; font-size: 20px;">Email</label>
+                <label for="email" style ="font-family: 'Montserrat'; font-size: 20px;"></label>
                 <input type="email" id="email" 
                     name="email" 
                     placeholder="Your Email" required>
                 <span class="error-message" id="emailError"></span>
             </div>
+            <style>
+                ::placeholder{
+                    font-family:'Montserrat';
+                    font-size:smaller
+                }
+            </style>
 
             <! -- Add deleted section here if we want to make this back into an order form -->
 
             <div class="form-group">
-                <label for="message" style ="font-family: 'Montserrat'; font-size: 20px;">How can we help you?</label>
+                <label for="message" style ="font-family: 'Montserrat'; font-size: 20px;"></label>
                 <textarea id="message" 
                         name="message" 
-                        placeholder="Anything you'd like to share? Put it here!" 
+                        placeholder="How can we help you?" 
                         rows="5" required></textarea>
                 <span class="error-message" id="messageError"></span>
             </div>
@@ -448,11 +455,9 @@ inside. */ -->
 
         Copyright &copy; 2024 UniVerse. All Rights Reserved.
         <p>
-            <div class="official-links">
-                <a-footer-link href="https://UniVerse.github.io" style="color: aliceblue">Privacy Policy</a-footer-link> | 
-                <a-footer-link href="https://UniVerse.github.io" style="color: aliceblue">Use of Cookies</a-footer-link> |
-                <a-footer-link href="https://UniVerse.github.io" style="color: aliceblue"> Terms of Service</a-footer-link>
-            </div>
+            <a class="footer-link" href="https://UniVerse.github.io" style="color: aliceblue">Privacy Policy</a-footer-link> | 
+            <a class="footer-link" href="https://UniVerse.github.io" style="color: aliceblue">Use of Cookies</a-footer-link> |
+            <a class="footer-link" href="https://UniVerse.github.io" style="color: aliceblue"> Terms of Service</a-footer-link>
         </p>
     </footer>
 </body>

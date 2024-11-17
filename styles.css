@@ -14,6 +14,18 @@ body {
     border: 5px solid black;
 }
 
+.blackpageapp { /* Style of app page with black background */
+    height: 100vh; /* Size of page can be adjusted as more content get added */
+    background-color: black; 
+    border: 5px solid black;
+}
+
+.blackpageapp:hover .appimg{ /* Style of app page with black background */
+    animation: slideUp .1s linear;
+    height:auto; 
+    width:25%;
+}
+
 .whitepage { /* Style of page with white background */
     height: 100vh; /* Size of page can be adjusted as more content get added */
     background-color: #e9ebec; 
@@ -122,29 +134,35 @@ body {
     background-color: #8280b9;
 }
 
-.designimg {
-    width:30%;
-    height:auto;
-    bottom: 450px; 
-    left: 850px; 
+.design-container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+}
+
+.appimg {
+    width:0px;
+    height: 0px;
+    bottom: 50vh; 
+    left: 100vh; 
     position: relative;
     z-index:2;
     opacity:0.7;
     border-radius: 10px;
 }
 
-.designimg-animation{
-    animation: slideInfromRight .3s ease-in-out forwards; 
+.appimg-animation{
+    animation: slideUp .3s;
 }
 
 .designrectangle {
     position: relative;
-    width: 550px;
+    width: 650px;
     height: 550px;
-    background-color: #595edd;
-    bottom:950px;
-    left:800px;
-    opacity: 0.3;
+    background-color: #210b4d;
+    top: 20%;
+    left: 10%;
     border-radius: 10px;
 }
 
@@ -602,25 +620,9 @@ input[type=submit]:hover {
     animation: slideInfromRight .3s ease-in-out forwards;
 }
 
-/*
-.logo {
-    position: sticky;
-    top: 5px;
-    right: 15px; 
-    float: right;
-    padding: 0px 0px;
-    z-index: 800;  
-}
-
-a.logo-style:hover {
-    height: 125;
-    width: 250
-}
-    */
-
 .image-hover {
     position: sticky;
-    top: 55px;
+    top: 20px;
     right: 15px; 
     float: right;
     padding: 0px 0px;
@@ -640,5 +642,4 @@ a.logo-style:hover {
 .styled-text{
         color: #595edd;
     }
-/** >>>>>>> 30be911dcc38e1c52c0edd5239e46db4a8de1d54 what is this?? /***
 

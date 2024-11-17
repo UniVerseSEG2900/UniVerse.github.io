@@ -531,6 +531,7 @@ textarea {
     width: 348%; /* Full viewport width */
     height: auto;
     left: -122.5%;
+    margin-top: 50px; /*Determines the spacing between newsletter and copyright section*/
     background-color: #3c409f;
     padding: 20px 0; /* Add vertical spacing inside */
     display: flex; /* Use Flexbox for alignment */

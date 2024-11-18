@@ -324,6 +324,8 @@ body {
 .image-container { /* Makes the image allow for overlap */
   position: relative;
   display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .image-container img { /* Makes the image allow for overlap */
@@ -409,6 +411,7 @@ body {
     width: 40%;
     margin: 0 auto; /* Centers the form horizontally */
     padding: 20px;
+    margin-top: 25px
 }
 
 .form-group {
@@ -465,7 +468,7 @@ textarea {
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
-    margin-top: 80px; /*Determines the spacing between the contact form and newsletter*/
+    margin-top: 60px; /*Determines the spacing between the contact form and newsletter*/
     background-color: #595edd;
     color: aliceblue;
     flex-wrap: wrap;
@@ -583,8 +586,10 @@ textarea {
     .container {
         display: flex;
         justify-content: space-between;  
-        gap: 150px; 
+        gap: 5.5%; 
         padding: 20px;
+        font-family: Comfortaa;
+        margin-bottom: 0px
     }
 
     /* Style for every box for pricing*/
@@ -602,7 +607,9 @@ textarea {
         background-size: cover;       
         background-position: center;  
         background-repeat: no-repeat;
+        line-height: 1.2
     }
+
     .box1 {
         width: 30%;
         height: 65%;
@@ -687,6 +694,7 @@ textarea {
         border-radius: 5px;
         cursor: pointer;
         transition: all 0.3s; /*Creates a smooth transition for effects when hovered over*/
+        font-family: Montserrat
     }
 
     a.footer-link:hover {
@@ -743,7 +751,6 @@ textarea {
       padding: 0;
       box-sizing: border-box;
     }
-<<<<<<< HEAD
     
     body{
       background: #000000;
@@ -812,9 +819,3 @@ textarea {
       height: 100px;
       padding: 5px;
     }
-
-
-/** >>>>>>> 30be911dcc38e1c52c0edd5239e46db4a8de1d54 what is this?? /***
-=======
->>>>>>> 572eccc065e43575fa591cc906c482cba47d1b8e
-

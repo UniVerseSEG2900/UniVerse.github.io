@@ -14,6 +14,18 @@ body {
     border: 5px solid black;
 }
 
+.blackpageapp { /* Style of app page with black background */
+    height: 100vh; /* Size of page can be adjusted as more content get added */
+    background-color: black; 
+    border: 5px solid black;
+}
+
+.blackpageapp:hover .appimg{ /* Style of app page with black background */
+    animation: slideUp .1s linear;
+    height:auto; 
+    width:25%;
+}
+
 .whitepage { /* Style of page with white background */
     height: 100vh; /* Size of page can be adjusted as more content get added */
     background-color: #e9ebec; 
@@ -122,29 +134,35 @@ body {
     background-color: #8280b9;
 }
 
-.designimg {
-    width:30%;
-    height:auto;
-    bottom: 450px; 
-    left: 850px; 
+.design-container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+}
+
+.appimg {
+    width:0px;
+    height: 0px;
+    bottom: 50vh; 
+    left: 100vh; 
     position: relative;
     z-index:2;
     opacity:0.7;
     border-radius: 10px;
 }
 
-.designimg-animation{
-    animation: slideInfromRight .3s ease-in-out forwards; 
+.appimg-animation{
+    animation: slideUp .3s;
 }
 
 .designrectangle {
     position: relative;
-    width: 550px;
+    width: 650px;
     height: 550px;
-    background-color: #595edd;
-    bottom:950px;
-    left:800px;
-    opacity: 0.3;
+    background-color: #210b4d;
+    top: 20%;
+    left: 10%;
     border-radius: 10px;
 }
 
@@ -250,7 +268,6 @@ body {
     filter: brightness(0) invert(1);
     transition: transform 0.3s ease;
 }
-
 
 .navigationbar select {
     margin-top: auto;
@@ -442,44 +459,124 @@ textarea {
     ;
 }
 
-
-
-/* Style the form */
-form {
-    border: 4px solid #f1f1f1;
-}
-
-/* Add some padding and a grey background color to containers */
-.newsletter-container {
+/*Styles the footer and newsletter*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 20px;
-    background-color: #f1f1f1;
-    margin-bottom: 10px; /* Add some space between containers */
+    margin-top: 80px; /*Determines the spacing between the contact form and newsletter*/
+    background-color: #595edd;
+    color: aliceblue;
+    flex-wrap: wrap;
+    /*border-radius: 50% 10rem; /*Creates a bubbly shaped text box. Might be useful somewhere else?*/
+    border-top-left-radius: 50% 10rem; /*Creates the curved effect on the top*/
+    border-top-right-radius: 50% 10rem; /*Creates the curved effect on the top*/
+    font-family: Comfortaa;
+
+    /*Transition*/
+    transform: translateY(50%); /* Start off-screen at the bottom */
+    opacity: 0; /* Fully transparent */
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out; /* Smooth transition */
 }
 
-/* Style the input elements and the submit button */
-input[type=text], input[type=submit] {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+/* Visible state (when scrolled into view) */
+.footer.show {
+    transform: translateY(0); /* Move into place */
+    opacity: 1; /* Fully visible */
 }
 
-/* Add margins to the checkbox */
-input[type=checkbox] {
-    margin-top: 16px;
+.footer div {
+    position: relative;
+    left: 33%;
+    flex: 1;
+    margin: 10px;
+    max-width: 30%; /*Adjust the width here*/
 }
 
-/* Style the submit button */
-input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
+.footer h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px; /*Adjust row spacing*/
+}
+
+.footer p {
+    text-align: center;
+    font-size: 1.1em;
+    margin: 5px 0;
+    margin-bottom: 8px /*Adjust row spacing*/
+}
+
+.newsletter form {
+    display: flex;
+    margin-top: 20px; /*Adjust row spacing*/
+    margin-bottom: 40px /*Adjust row spacing*/
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    flex: 1;
     border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
 }
 
-input[type=submit]:hover {
-    opacity: 0.8;
+.newsletter button {
+    padding: 10px 20px;
+
+    color: #595edd;
+    background-color: #ddd;
+
+    border-color: aliceblue;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: bold;
+    transition: all 0.3s; /*Creates a smooth transition for effects when hovered over*/
+}
+
+.newsletter button:hover {
+    background-color: #676be6;
+    color: aliceblue;
+}
+
+.copyright-section {
+    position: relative; /* Keeps the box in place */
+    width: 348%; /* Full viewport width */
+    height: auto;
+    left: -122.5%;
+    margin-top: 50px; /*Determines the spacing between newsletter and copyright section*/
+    background-color: #3c409f;
+    padding: 20px 0; /* Add vertical spacing inside */
+    display: flex; /* Use Flexbox for alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    box-sizing: border-box; /* Includes padding in width/height calculation */
+    font-family: serif
+}
+
+.copyright-section a {
+    color: aliceblue;
+    text-decoration: underline;
+    transition: all 0.3s; /*Creates a smooth transition for effects when hovered over*/
+}
+
+.copyright-section a:hover {
+    color: #595edd;
+    background-color: aliceblue;
+    text-decoration: none;
+}
+
+/*Applies a restrictive width feature when screen is small enough to make it adaptable to different screen sizes*/
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer div {
+        max-width: none;
+    }
 }
 
 /* Style for the boxes of pricing */
@@ -531,7 +628,7 @@ input[type=submit]:hover {
     }
     .box2 {
         width: 30%;
-        height: 75%;
+        height: 65%;
         background-color: #8f91c4;
         border-color: #595edd;
         border-width: 7px;
@@ -556,7 +653,7 @@ input[type=submit]:hover {
     }
     .box3 {
         width: 30%;
-        height: 100%;
+        height: 65%;
         background-color: #8f91c4;
         border-color: #595edd;
         border-width: 7px;
@@ -589,6 +686,7 @@ input[type=submit]:hover {
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        transition: all 0.3s; /*Creates a smooth transition for effects when hovered over*/
     }
 
     a.footer-link:hover {
@@ -615,25 +713,9 @@ input[type=submit]:hover {
     animation: slideInfromRight .3s ease-in-out forwards;
 }
 
-/*
-.logo {
-    position: sticky;
-    top: 55px;
-    right: 15px; 
-    float: right;
-    padding: 0px 0px;
-    z-index: 800;  
-}
-
-a.logo-style:hover {
-    height: 125;
-    width: 250
-}
-    */
-
 .image-hover {
     position: sticky;
-    top: 55px;
+    top: 20px;
     right: 15px; 
     float: right;
     padding: 0px 0px;
@@ -661,6 +743,7 @@ a.logo-style:hover {
       padding: 0;
       box-sizing: border-box;
     }
+<<<<<<< HEAD
     
     body{
       background: #000000;
@@ -732,4 +815,6 @@ a.logo-style:hover {
 
 
 /** >>>>>>> 30be911dcc38e1c52c0edd5239e46db4a8de1d54 what is this?? /***
+=======
+>>>>>>> 572eccc065e43575fa591cc906c482cba47d1b8e
 

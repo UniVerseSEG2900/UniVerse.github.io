@@ -13,6 +13,7 @@ inside. */ -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <script type = "text/javascript" src="main.js"></script>
 </head>
 
 <body>
@@ -124,45 +125,21 @@ inside. */ -->
         </div>
     </div>
 <div>
-    <div class="blackpage" id="specspage">
-        <div class="headerblack">
-            <h1 style= 
-            "text-align:left;
-            font-size: 75px; 
-            font-family:Comfortaa;
-            margin-left: 150px;
-            margin-top: 200px;
-    "
-            >Cutting<br>Edge<br>Design
-        </h1> <! -- Change the title here. -->
-        <p style=
-            "font-family: Comfortaa; 
-            font-size: 15px; 
-            text-align:left;
-            margin-top: -30px;
-            margin-left:150px;
-            font-weight: normal;
-            line-height:1.8;
-            
-            ">
-            Discover the UniVersal Translation Glasses – your ultimate <br>
-            language companion. These sleek, cutting-edge glasses provide  <br>
-            real-time, seamless translation of conversations and text, <br>
-            helping you navigate any language barrier effortlessly.<br>
-
-        </p>
-        </div>
+    <div class="blackpageapp" id="appdemopage">
+        <div class="design-container"> 
+            <div class="designrectangle">
+                <div class="headerblack" style="padding-top:7%; text-align:left; padding-left:5%">
+                <h1>Fully </br> customizable</h1> <! -- Change the title here. -->
+                <p style="font-family: Comfortaa; font-size: 30px; text-align:left; font-weight: normal; line-height:1.8;">
+                YOU can control everything. </br> Limitless customizations </br>to make your glasses work for you.</p>
+                </div>
+            </div>
+            <img class="appimg" src="images\PhoneAppDemo.png" alt="Image of the UniVerse mobile app">
         <div>
-        <img class="designimg" src="images/Kocolior%20Men%27s%20Full%20Rim%20Large%20Square%20Titanium%20Eyeglasses%209822.jpeg" alt="glasses">
-        <div class="designrectangle">
-        
-        </div>
-        </div>
     </div>
-
-<style>
-
-</style>    
+</div>
+</div>
+  
     <div class="blackpage" id="pricingpage">
         <div class="headerblack"><h2>Pricing</h2> <! -- Change the title here. --></div>
         <div class="container">
@@ -430,60 +407,45 @@ inside. */ -->
     });
     </script>
     
-    <footer style="background-color: #333; color: white; text-align: center; padding: 10px 0; font-family: Verdana">
-        <title>Newsletter Subscription</title>
-        <style>    
-            /* Add some padding and a grey background color to containers */
-            .container {
-                padding: 20px;
-                margin-bottom: 10px; /* Add some space between containers */
-            }
+    <footer class="footer">
+        <div class="newsletter">
+            <h3>Want to Stay Updated?</h3>
+            <p>Sign up for our newsletter today.</p>
+            <form>
+                <input type="email" placeholder="Email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
     
-            /* Style the input elements and the submit button */
-            input[type=text], input[type=submit] {
-                width: 100%;
-                padding: 12px;
-                margin: 8px 0;
-                display: inline-block;
-            }
-    
-            /* Add margins to the checkbox */
-    
-            /* Style the submit button */
-            input[type=submit] {
-                background-color: #04AA6D;
-                color: white;
-                border: none;
-            }
-    
-            input[type=submit]:hover {
-                opacity: 0.8;
-            }
-        </style>
-        <form action="action_page.php">
-            <div class="container">
-              <h2>Stay connected with UniVerse!</h2>
-            </div>
-          
-            <div class="container" style=" font-family: Verdana;">
-              <input type="text" placeholder="Name" name="name" required>
-              <input type="text" placeholder="Email address" name="mail" required>
-            </div>
-          
-            <div class="newsletter-container">
-              <input type="submit" value="Subscribe">
-
-
-
-            </div>
-          </form>
-
-        Copyright &copy; 2024 UniVerse. All Rights Reserved.
-        <p>
-            <a class="footer-link" href="https://UniVerse.github.io" style="color: aliceblue">Privacy Policy</a-footer-link> | 
-            <a class="footer-link" href="https://UniVerse.github.io" style="color: aliceblue">Use of Cookies</a-footer-link> |
-            <a class="footer-link" href="https://UniVerse.github.io" style="color: aliceblue"> Terms of Service</a-footer-link>
-        </p>
+            <copyright-section class="copyright-section">
+                <p style="font-size: 0.95em">Copyright &copy; 2024 UniVerse. All Rights Reserved.</p>
+                <p style="font-size: 0.9em">
+                    <a href="https://UniVerse.github.io">Privacy Policy</a> | 
+                    <a href="https://UniVerse.github.io">Use of Cookies</a> |
+                    <a href="https://UniVerse.github.io"> Terms of Service</a>
+                </p>
+            </copyright-section>
+        </div>
     </footer>
+
+    <script>
+        //Makes the footer slide into the screen when the user scrolls to the bottom
+        document.addEventListener("DOMContentLoaded", () => {
+            const footer = document.querySelector('.footer');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        footer.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            observer.observe(footer);
+        });
+    </script>
+    
 </body>
 </html>

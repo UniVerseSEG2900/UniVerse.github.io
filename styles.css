@@ -519,6 +519,7 @@ textarea {
     cursor: pointer;
     font-family: Montserrat;
     font-weight: bold;
+    transition: all 0.3s; /*Creates a smooth transition for effects when hovered over*/
 }
 
 .newsletter button:hover {
@@ -544,6 +545,7 @@ textarea {
 .copyright-section a {
     color: aliceblue;
     text-decoration: underline;
+    transition: all 0.3s; /*Creates a smooth transition for effects when hovered over*/
 }
 
 .copyright-section a:hover {

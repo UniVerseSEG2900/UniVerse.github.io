@@ -611,6 +611,11 @@ textarea {
         line-height: 1.2;
     }
 
+    .box:hover {
+        background: #a3a4da;
+        box-shadow: 0 8px 12px 0 rgba(103, 91, 211, 0.6) /*Creates a translucent coloured shadow when the price box is hovered over*/
+    }
+
     .box1 {
         width: 30%;
         height: 65%;

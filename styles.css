@@ -370,6 +370,19 @@ body {
     float: right
 }
 
+/*Styles for about us page */
+.rounded-box {
+    width: 150px; /* Set the width of the box */
+    height: 170px; /* Set the height of the box */
+    background-color: #595EDD; /* Set the background color */
+    border-radius: 15px; /* Round the corners */
+    display: flex; /* Optional: centers content inside */
+    align-items: center; /* Optional: centers content vertically */
+    justify-content: center; /* Optional: centers content horizontally */
+    color: white; /* Optional: text color */
+}
+
+
 /* Styles for contact form */
 
 .contact-form-container {
@@ -639,6 +652,84 @@ a.logo-style:hover {
 
 .styled-text{
         color: #595edd;
+}
+
+    @import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+    
+    body{
+      background: #000000;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    
+    .wrapper{
+      margin-top: 7%;
+      margin-bottom: 1%;
+    }
+    
+    .wrapper h1{
+      font-family: 'Allura', cursive;
+      font-size: 52px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    
+    .team{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: auto;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+    
+    .team .team_member{
+      background: #8f91c4;
+      margin: 5px;
+      margin-bottom: 50px;
+      width: 300px;
+      padding: 20px;
+      line-height: 20px;
+      color: #8e8b8b;  
+      position: relative;
+    }
+    
+    .team .team_member h3{
+      color: #000000;
+      font-size: 26px;
+      margin-top: 50px;
+    }
+    
+    .team .team_member p.role{
+      color: #8f91c4;
+      margin: 12px 0;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    
+    .team .team_member .team_img{
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #8f91c4
+      ;
+    }
+    
+    .team .team_member .team_img img{
+      width: 100px;
+      height: 100px;
+      padding: 5px;
+    }
+
+
 /** >>>>>>> 30be911dcc38e1c52c0edd5239e46db4a8de1d54 what is this?? /***
 

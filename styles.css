@@ -89,6 +89,7 @@ body {
 
 .homeemphasis { 
     padding-right: 100px;
+    padding-top: 40px;
     color: white; 
     font-size: 50px; 
     text-align:right; 
@@ -97,7 +98,7 @@ body {
 }
 
 .homesub { 
-    padding-top: 0px;
+    padding-top: 70px;
     position: relative;
     bottom: 7%;
     color: #52435e; /*alt colour: #2e2635 */
@@ -411,7 +412,7 @@ body {
     width: 40%;
     margin: 0 auto; /* Centers the form horizontally */
     padding: 20px;
-    margin-top: 25px
+    margin-top: 35px
 }
 
 .form-group {
@@ -468,7 +469,7 @@ textarea {
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
-    margin-top: 60px; /*Determines the spacing between the contact form and newsletter*/
+    margin-top: 65px; /*Determines the spacing between the contact form and newsletter*/
     background-color: #595edd;
     color: aliceblue;
     flex-wrap: wrap;
@@ -585,11 +586,11 @@ textarea {
 /* Style for the boxes of pricing */
     .container {
         display: flex;
-        justify-content: space-between;  
-        gap: 5.5%; 
+        justify-content: space-between;
+        gap: 6%; 
         padding: 20px;
         font-family: Comfortaa;
-        margin-bottom: 0px
+        margin-bottom: 0px;    
     }
 
     /* Style for every box for pricing*/
@@ -607,7 +608,7 @@ textarea {
         background-size: cover;       
         background-position: center;  
         background-repeat: no-repeat;
-        line-height: 1.2
+        line-height: 1.2;
     }
 
     .box1 {

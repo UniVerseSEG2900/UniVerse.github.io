@@ -673,6 +673,7 @@ textarea {
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        transition: all 0.3s; /*Creates a smooth transition for effects when hovered over*/
     }
 
     a.footer-link:hover {

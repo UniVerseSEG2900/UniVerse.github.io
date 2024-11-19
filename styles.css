@@ -15,6 +15,18 @@ body {
     border: 5px solid black;
 }
 
+.blackpageapp { /* Style of app page with black background */
+    height: 100vh; /* Size of page can be adjusted as more content get added */
+    background-color: black; 
+    border: 5px solid black;
+}
+
+.blackpageapp:hover .appimg{ /* Style of app page with black background */
+    animation: slideUp .1s linear;
+    height:auto; 
+    width:25%;
+}
+
 .whitepage { /* Style of page with white background */
     height: 100vh; /* Size of page can be adjusted as more content get added */
     background-color: #e9ebec; 
@@ -78,6 +90,7 @@ body {
 
 .homeemphasis { 
     padding-right: 100px;
+    padding-top: 40px;
     color: white; 
     font-size: 50px; 
     text-align:right; 
@@ -86,7 +99,7 @@ body {
 }
 
 .homesub { 
-    padding-top: 0px;
+    padding-top: 70px;
     position: relative;
     bottom: 7%;
     color: #52435e; /*alt colour: #2e2635 */
@@ -123,29 +136,35 @@ body {
     background-color: #8280b9;
 }
 
-.designimg {
-    width:30%;
-    height:auto;
-    bottom: 450px; 
-    left: 850px; 
+.design-container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+}
+
+.appimg {
+    width:0px;
+    height: 0px;
+    bottom: 50vh; 
+    left: 115vh; 
     position: relative;
     z-index:2;
     opacity:0.7;
     border-radius: 10px;
 }
 
-.designimg-animation{
-    animation: slideInfromRight .3s ease-in-out forwards; 
+.appimg-animation{
+    animation: slideUp .3s;
 }
 
 .designrectangle {
     position: relative;
-    width: 550px;
+    width: 650px;
     height: 550px;
-    background-color: #595edd;
-    bottom:950px;
-    left:800px;
-    opacity: 0.3;
+    background-color: #210b4d;
+    top: 30%;
+    left: 10%;
     border-radius: 10px;
 }
 
@@ -252,7 +271,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-
 .navigationbar select {
     margin-top: auto;
     background-color: #333;
@@ -308,6 +326,8 @@ body {
 .image-container { /* Makes the image allow for overlap */
   position: relative;
   display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .image-container img { /* Makes the image allow for overlap */
@@ -316,6 +336,7 @@ body {
   height: auto;
 }
 
+/*Overview page styling*/
 .overlay-text { /* Styles for text overlapping images */
   position: absolute;
   top: 50%; /* Centers the title */
@@ -334,42 +355,81 @@ body {
     height: auto
 }
   
-  .overview-backdrop-container img { /* Makes the image allow for overlap */
+.overview-backdrop-container img { /* Makes the image allow for overlap */
     display: block;
     width: 100%;
     height: auto;
 }
   
-  .overview-overlay-title { /* Styles for text overlapping images */
-    position: absolute;
-    top: 45%; /* Centers the title */
-    left: 50%; /* Centers the title */
-    transform: translate(-94%, -90%);
-    color: #ffffff;
-    background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind title */
-    padding: 0px 40px;
+.flip-box {
+    background-color: transparent;
+    width: 40vw;
+    height: 20vw;
+    /*border: 1px dotted #f1f1f1;*/
+    perspective: 1000px;
+
     font-family: Comfortaa;
-    font-size: 24px
-}
+    font-size: 1.8vw;
+    font-weight: bold;
+    line-height: 1.4;
 
-  .overview-overlay-text { /* Styles for text overlapping images */
+    position: absolute; /* Overlay the textbox */
+    top: 8%; /* Adjust vertical positioning as needed */
+    left: 4%; /* Adjust horizontal positioning as needed */
+}
+  
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+.flip-box:hover .flip-box-inner {
+    transform: rotateX(180deg);
+}
+  
+.flip-box-front, .flip-box-back {
     position: absolute;
-    top: 50%; /* Centers the text vertically */
-    left: 50%; /* Left alligns the text */
-    transform: translate(-7%, 55%);
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+.flip-box-front {
     color: #ffffff;
-    background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind text */
-    padding: 10px 10px;
-    font-family: Montserrat;
-    font-size: 20px
+    background-color: rgba(13, 0, 44, 0.5);
+}
+  
+.flip-box-back {
+    color: #ffffff;
+    background-color: rgba(13, 0, 44, 0.5);
+    transform: rotateX(180deg);
 }
 
+/*Profile image styling*/
 .img {
     height: 200px; /* Size of each profile's section */
     background-color: #e9ebec;
     border: 50px solid #e9ebec;
     float: right
 }
+
+/*Styles for about us page */
+.rounded-box {
+    width: 150px; /* Set the width of the box */
+    height: 170px; /* Set the height of the box */
+    background-color: #595EDD; /* Set the background color */
+    border-radius: 15px; /* Round the corners */
+    display: flex; /* Optional: centers content inside */
+    align-items: center; /* Optional: centers content vertically */
+    justify-content: center; /* Optional: centers content horizontally */
+    color: white; /* Optional: text color */
+}
+
 
 /* Styles for contact form */
 
@@ -381,54 +441,6 @@ body {
     width: 50%;
     margin: 0 auto; /* Centers the form horizontally
     padding: 20px;
-    height:60%;
-    overflow-y: auto;
-    display:flex
-}  */
-
-
-
-.contact-form-container {
-    width:80%;
-    margin: 120px auto;
-    box-sizing: border-box
-
-}
-
-
-/* Flex container to arrange the form and Reach Us side by side */
-.contact-box {
-    display: flex;
-    justify-content: space-between;
-    height: 550px;
-    border-radius: 20px;
-     /* Space between form and Reach Us section */
-}
-
-/* Left side: Contact form */
-.contact-left {
-    flex: 6; /* The form takes up most of the space */
-    flex-basis:60%;
-    padding: 40px;
-    background-color: #cfcfcf;
-    box-sizing: border-box;
-    overflow-y: auto;
-}
-
-/* Right side: Reach Us section */
-.contact-right {
-    flex:   0 1 500px; /* The Reach Us section takes up less space */
-    padding: 40px;
-    background-color: #595edd; /* Optional background color for the Reach Us section */
-    box-sizing: border-box;
-}
-
-tr td:first-child{
-    padding-right: 20px;
-}
-
-tr td{
-    padding-top: 20px;
 }
 
 .form-group {
@@ -475,56 +487,138 @@ textarea {
 }
 
 .submit-button:hover {
-    background-color: #4f547f 
+    background-color: #8f91c4
     ;
 }
 
-
-
-/* Style the form */
-form {
-    border: 4px solid #f1f1f1;
-}
-
-/* Add some padding and a grey background color to containers */
-.newsletter-container {
+/*Styles the footer and newsletter*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 20px;
-    background-color: #f1f1f1;
-    margin-bottom: 10px; /* Add some space between containers */
+    margin-top: 65px; /*Determines the spacing between the contact form and newsletter*/
+    background-color: #595edd;
+    color: aliceblue;
+    flex-wrap: wrap;
+    /*border-radius: 50% 10rem; /*Creates a bubbly shaped text box. Might be useful somewhere else?*/
+    border-top-left-radius: 50% 10rem; /*Creates the curved effect on the top*/
+    border-top-right-radius: 50% 10rem; /*Creates the curved effect on the top*/
+    font-family: Comfortaa;
+
+    /*Transition*/
+    transform: translateY(50%); /* Start off-screen at the bottom */
+    opacity: 0; /* Fully transparent */
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out; /* Smooth transition */
 }
 
-/* Style the input elements and the submit button */
-input[type=text], input[type=submit] {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+/* Visible state (when scrolled into view) */
+.footer.show {
+    transform: translateY(0); /* Move into place */
+    opacity: 1; /* Fully visible */
 }
 
-/* Add margins to the checkbox */
-input[type=checkbox] {
-    margin-top: 16px;
+.footer div {
+    position: relative;
+    left: 33%;
+    flex: 1;
+    margin: 10px;
+    max-width: 30%; /*Adjust the width here*/
 }
 
-/* Style the submit button */
-input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
+.footer h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px; /*Adjust row spacing*/
+}
+
+.footer p {
+    text-align: center;
+    font-size: 1.1em;
+    margin: 5px 0;
+    margin-bottom: 8px /*Adjust row spacing*/
+}
+
+.newsletter form {
+    display: flex;
+    margin-top: 20px; /*Adjust row spacing*/
+    margin-bottom: 40px /*Adjust row spacing*/
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    flex: 1;
     border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
 }
 
-input[type=submit]:hover {
-    opacity: 0.8;
+.newsletter button {
+    padding: 10px 20px;
+
+    color: #595edd;
+    background-color: #ddd;
+
+    border-color: aliceblue;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: bold;
+    transition: all 0.3s; /*Creates a smooth transition for effects when hovered over*/
+}
+
+.newsletter button:hover {
+    background-color: #868aee;
+    color: aliceblue;
+}
+
+.copyright-section {
+    position: relative; /* Keeps the box in place */
+    width: 348%; /* Full viewport width */
+    height: auto;
+    left: -122.5%;
+    margin-top: 50px; /*Determines the spacing between newsletter and copyright section*/
+    background-color: #3c409f;
+    padding: 20px 0; /* Add vertical spacing inside */
+    display: flex; /* Use Flexbox for alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    box-sizing: border-box; /* Includes padding in width/height calculation */
+    font-family: serif
+}
+
+.copyright-section a {
+    color: aliceblue;
+    text-decoration: underline;
+    transition: all 0.3s; /*Creates a smooth transition for effects when hovered over*/
+}
+
+.copyright-section a:hover {
+    color: #595edd;
+    background-color: aliceblue;
+    text-decoration: none;
+}
+
+/*Applies a restrictive width feature when screen is small enough to make it adaptable to different screen sizes*/
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer div {
+        max-width: none;
+    }
 }
 
 /* Style for the boxes of pricing */
     .container {
         display: flex;
-        justify-content: space-between;  
-        gap: 150px; 
+        justify-content: space-between;
+        gap: 6%; 
         padding: 20px;
+        font-family: Comfortaa;
+        margin-bottom: 0px;    
     }
 
     /* Style for every box for pricing*/
@@ -542,7 +636,14 @@ input[type=submit]:hover {
         background-size: cover;       
         background-position: center;  
         background-repeat: no-repeat;
+        line-height: 1.2;
     }
+
+    .box:hover {
+        background: #a3a4da;
+        box-shadow: 0 8px 12px 0 rgba(103, 91, 211, 0.6) /*Creates a translucent coloured shadow when the price box is hovered over*/
+    }
+
     .box1 {
         width: 30%;
         height: 65%;
@@ -568,7 +669,7 @@ input[type=submit]:hover {
     }
     .box2 {
         width: 30%;
-        height: 75%;
+        height: 65%;
         background-color: #8f91c4;
         border-color: #595edd;
         border-width: 7px;
@@ -593,7 +694,7 @@ input[type=submit]:hover {
     }
     .box3 {
         width: 30%;
-        height: 100%;
+        height: 65%;
         background-color: #8f91c4;
         border-color: #595edd;
         border-width: 7px;
@@ -626,9 +727,11 @@ input[type=submit]:hover {
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        transition: all 0.3s; /*Creates a smooth transition for effects when hovered over*/
+        font-family: Montserrat
     }
 
-    a-footer-link:hover {
+    a.footer-link:hover {
         background-color: rgb(145, 140, 213);
     }
 
@@ -652,17 +755,101 @@ input[type=submit]:hover {
     animation: slideInfromRight .3s ease-in-out forwards;
 }
 
-.logo {
+.image-hover {
     position: sticky;
-    top: 55px;
+    top: 20px;
     right: 15px; 
     float: right;
     padding: 0px 0px;
-    z-index: 800;
+    z-index: 800;  
+    
+    width: 225px; /* Specify the width */
+    height: 125px; /* Specify the height */
+    background-image: "images\logo.png"; /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+.image-hover:hover {
+    background-image: url('hover-image.jpg'); /* Change on hover */
 }
 
 .styled-text{
         color: #595edd;
-    }
-/** >>>>>>> 30be911dcc38e1c52c0edd5239e46db4a8de1d54 what is this?? /***
+}
 
+    @import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body{
+      background: #000000;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    
+    .wrapper{
+      margin-top: 7%;
+      margin-bottom: 1%;
+    }
+    
+    .wrapper h1{
+      font-family: 'Allura', cursive;
+      font-size: 52px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    
+    .team{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: auto;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+    
+    .team .team_member{
+      background: #8f91c4;
+      margin: 5px;
+      margin-bottom: 50px;
+      width: 300px;
+      padding: 20px;
+      line-height: 20px;
+      color: #8e8b8b;  
+      position: relative;
+    }
+    
+    .team .team_member h3{
+      color: #000000;
+      font-size: 26px;
+      margin-top: 50px;
+    }
+    
+    .team .team_member p.role{
+      color: #8f91c4;
+      margin: 12px 0;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    
+    .team .team_member .team_img{
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #8f91c4
+      ;
+    }
+    
+    .team .team_member .team_img img{
+      width: 100px;
+      height: 100px;
+      padding: 5px;
+    }

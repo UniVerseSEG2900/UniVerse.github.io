@@ -14,6 +14,7 @@ inside. */ -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <script type = "text/javascript" src="main.js"></script>
 </head>
 
 <body>
@@ -93,7 +94,7 @@ inside. */ -->
         });
     </script>
 
-    <div class="logo">
+    <div class="image-hover">
             <a href="#homepage"><img src="images\logo.png" alt="Website logo: UniVerse written in blue and purple" width="225" height="100"></a>
         </div>
 
@@ -113,69 +114,59 @@ inside. */ -->
 
     <div class="overview-backdrop-container" id="overviewpage"> <! -- To change the header image, replace the background named "overview_backdrop" in the images folder. -->
         <img src="images\overview_backdrop.jpg" alt="Tech specs image">
-        <div class="overview-overlay-title">
-            <h1>The Future of Communication is Here.</h1> <! -- Edit the title here. -->
-            <h1>Breaking language barriers, one lens at a time.</h1>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+            <div class="flip-box-front">
+                <h1 style="margin-top: 2.6vw">The Future of Communication is Here.</h1>
+            </div>
+            <div class="flip-box-back">
+                <h1 style="margin-top: 2.6vw">Breaking language barriers, one lens at a time.</h1>
+            </div>
         </div>
-        <div class="overview-overlay-text">
-            <p>• Powered by AI</p>
-            <p>• Accurately translates anything with voice control</p>
-            <p>• Allows tone and candence adjustements for text to speech</p>
-            <p>• Custamisable lenses and frames and compatible with perscription lenses</p>
+
+        <div class="flip-box" style="top: 140%; left: 125%">
+            <div class="flip-box-inner">
+            <div class="flip-box-front">
+                <p style="font-size: 4.1vw; margin-top: 4.2vw">UniVerse Glasses: Powered by AI</p>
+            </div>
+            <div class="flip-box-back" style="font-size: 1.9vw; line-height: 1.4; font-weight: normal; font-family: Montserrat">
+                <p style="text-align: left; margin-top: 1vw; margin-left: 1.6vw">• Accurately translates anything with voice control</p>
+                <p style="text-align: left; margin-top: 1vw; margin-left: 1.6vw">• Allows tone and candence adjustements for text to speech</p>
+                <p style="text-align: left; margin-top: 1vw; margin-left: 1.6vw">• Custamisable lenses and frames and compatible with perscription lenses</p>
+            </div>
+        </div>
         </div>
     </div>
+</div>
+
 <div>
-    <div class="blackpage" id="specspage">
-        <div class="headerblack">
-            <h1 style= 
-            "text-align:left;
-            font-size: 75px; 
-            font-family:Comfortaa;
-            margin-left: 150px;
-            margin-top: 200px;
-    "
-            >Cutting<br>Edge<br>Design
-        </h1> <! -- Change the title here. -->
-        <p style=
-            "font-family: Comfortaa; 
-            font-size: 15px; 
-            text-align:left;
-            margin-top: -30px;
-            margin-left:150px;
-            font-weight: normal;
-            line-height:1.8;
-            
-            ">
-            Discover the UniVersal Translation Glasses – your ultimate <br>
-            language companion. These sleek, cutting-edge glasses provide  <br>
-            real-time, seamless translation of conversations and text, <br>
-            helping you navigate any language barrier effortlessly.<br>
-
-        </p>
-        </div>
+    <div class="blackpageapp" id="appdemopage">
+        <div class="design-container"> 
+            <div class="designrectangle">
+                <div class="headerblack" style="padding-top:7%; text-align:left; padding-left:5%">
+                <h1 style="margin-top: 25px; margin-bottom: 30px">Fully </br> customizable</h1> <! -- Change the title here. -->
+                <p style="font-family: Comfortaa; font-size: 30px; text-align: left; font-weight: normal; line-height:1.8;">
+                YOU can control everything. </br> Limitless customizations </br>to make your glasses work for you.</p>
+                </div>
+            </div>
+            <img class="appimg" src="images\PhoneAppDemo.png" alt="Image of the UniVerse mobile app">
         <div>
-        <img class="designimg" src="images/Kocolior%20Men%27s%20Full%20Rim%20Large%20Square%20Titanium%20Eyeglasses%209822.jpeg" alt="glasses">
-        <div class="designrectangle">
-        
-        </div>
-        </div>
     </div>
-
-<style>
-
-</style>    
-    <div class="blackpage" id="pricingpage">
-        <div class="headerblack"><h2>Pricing</h2> <! -- Change the title here. --></div>
+</div>
+</div>
+  
+    <div class="blackpage" style="margin-top: 50px; margin-bottom: 90px; height: auto" id="pricingpage">
+        <div class="headerblack" style="margin-top: 100px"><h2>Pricing</h2> <! -- Change the title here. --></div>
         <div class="container">
     <div class="box box1">
         <div class="styled-text">
-            <center><h1>JUNIOR</h1></center> </div>
-        <center><h3 style="color:white; font-size:15px;">Made with your child in mind, these glasses allow for an easy experience for kids to unleash their potential.</h3></center>
+            <center><h1 style="margin: 10px;">JUNIOR</h1></center> </div>
+        <center><h3 style="color:white; font-size:15px; line-height: 2.1; margin-bottom: 12px;">Made with your child in mind, these glasses allow for an easy experience for kids to unleash their potential.</h3></center>
         <center><h3 style="color: white;font-size:20px;">&#9733 Translates up to 5 languages<br/>
             <br/>&#9733 Flexible frames (for less accidents!)<br/>
-            <br/>&#9733 Easy-to-use features with parental control</h3></center>
+            <br/>&#9733 Easy-to-use feautures with parental control</h3></center>
         <div class="styled-text">
-            <center><h2>$249.99</h2></center>
+            <center><h2 style="margin: 20px;">$249.99</h2></center>
         </div>
         <a href="Pricing_pages/children.html">
             <button style="width:40%; height:7%;">View more</button>
@@ -183,13 +174,13 @@ inside. */ -->
     </div>
     <div class="box box2">
         <div class="styled-text">
-            <center><h1>ADVANCED</h1></center></div>
-        <center><h3 style="color: white; font-size: 15px;">Made for everyday life, these glasses seamlessly integrate UniVerse features into your routine, whether that be personal or professional.</h3></center>
+            <center><h1 style="margin: 10px;">ADVANCED</h1></center></div>
+        <center><h3 style="color: white; font-size: 15px; line-height: 2.1; margin-bottom: 12px;">Made for everyday life, these glasses seamlessly integrate UniVerse features into your routine, whether that be personal or professional.</h3></center>
         <center><h3 style="color: white; font-size:20px;">&#9733 Translate up to 10 languages <br/>
             <br/>&#9733 Optimized processing speed <br/>
             <br/>&#9733 Voice customization</h3></center>
         <div class="styled-text">
-            <center><h2>$319.99</h2></center>
+            <center><h2 style="margin: 20px;">$319.99</h2></center>
         </div>
         <a href="Pricing_pages/adults.html">
             <button style="width:40%; height:7%;">View more</button>
@@ -197,16 +188,16 @@ inside. */ -->
     </div>
     <div class="box box3">
         <div class="styled-text">
-            <center><h1>EXPERT</h1></center>
+            <center><h1 style="margin: 10px;">EXPERT</h1></center>
         </div>
-        <center><h3 style="color: white; font-size:15px;">Designed for top precision, these glasses will elevate your professional efficiency and ensure you perform at your highest level.</h3></center>
+        <center><h3 style="color: white; font-size:15px; line-height: 2.1; margin-bottom: 12px;">Designed for top precision, these glasses will elevate your professional efficiency and ensure you perform at your highest level.</h3></center>
         <center><h3 style="color: white; font-size: 20px;">&#9733 Translate up to 20 languages <br/>
             <br/>&#9733 Voice recording and support <br/>
             <br/>&#9733 Additional app integrations</h3></center>
         <div class="styled-text">
-            <center><h2>$399.99</h2></center>
+            <center><h2 style="margin: 20px;">$399.99</h2></center>
         </div>
-        <a href="Pricing_pages/expert.html">
+        <a href="Pricing_pages/expert.html"">
             <button style="width:40%; height:7%;">View more</button>
         </a>
     </div>
@@ -220,46 +211,71 @@ inside. */ -->
         </div>
     </div>
 
-    <div class="description"> <! -- To change the image beside the description, change the image labelled "team_img" in the images folder. -->
-        <img src="images/about_us_description.jpg" alt="Team members discussing" style="width: 400px; height: auto; margin-top: 30px; margin-right: 50px; margin-bottom: 15px;" align="left">
-        <p style="color:white; font-size: 25px; margin-top: 50px; margin-left: 10px; font-family: 'Comfortaa';" align=middle>Meet the UniVerse Team 
-        </p> <! -- Edit the description here. -->
-        <p style="color:white; font-size: 20px; margin-top: 30px; margin-left: 10px; font-family: 'Montserrat';" align=middle>Six university students passionate about bridging language barriers through innovative technology. Our journey began with a shared vision to create a tool that could bring people closer together, regardless of the languages they speak. Together, we combined our skills in engineering, design, and software development to create UniVerse, a device that empowers users to communicate freely across languages. Driven by curiosity and a desire to make global connections easier, we designed UniVerse to be intuitive, stylish, and accessible to all!
-        </p>
+    <head>
+        <meta charset="UTF-8">
+        <title>Our Team Section</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    
+    <div class="wrapper">
+      <div class="team">
+        <div class="team_member">
+          <div class="team_img">
+            <img src="images/rayenpic.png" alt="Team_image" style="width: 130px; margin-left: -18px; margin-top: 2px;">
+          </div>
+          <h3 style="color:white; font-family: montseratt;">Rayen Ben Tamarzizt</h3>
+          <p class="role"; style="color: white; font-family: montserrat;">Project Manager</p>
+          <p style="color:white; font-family: montseratt;">Oversees the development and implementation of UniVerse. Ensures project deadlines are met, coordinates with all team members, manages overall product vision and progress, and resolves any team conflicts efficiently.</p>
+        </div>
+        <div class="team_member">
+          <div class="team_img">
+            <img src="images/feliciapic.png" alt="Team_image" style="width: 130px; margin-left: -17px;">
+          </div>
+          <h3 style="color:white; font-family: montseratt;">Felicia Nguyen</h3>
+          <p class="role"; style="color:white; font-family: montseratt;">Software Engineer</p>
+          <p style="color:white; font-family: montseratt;">Develops and maintains the AI and language translation algorithms for UniVerse. Focuses on optimizing text-to-speech, voice control, and AR integration for seamless real-time translation.</p></div>
+        <div class="team_member">
+          <div class="team_img">
+            <img src="images/elipic.png" alt="Team_image" style="width: 130px; margin-left: -14px; margin-top: 2px;">
+          </div>
+          <h3 style="color:white; font-family: montseratt;">Elizabeth Foley</h3>
+          <p class="role"; style="color:white; font-family: montseratt;">UX/UI Designer</p>
+          <p style="color:white; font-family: montseratt;">Creates intuitive interfaces for users to interact with UniVerse. Designs the AR display on the smart glasses, ensuring accessibility and simplicity. Focuses on creating a seamless and visually appealing user experience.</p>
+        </div>
+      </div>
+    </div>	
+
+<!--Second row-->
+<div class="wrapper">
+    <div class="team">
+      <div class="team_member">
+        <div class="team_img">
+          <img src="images/vasseekapic.png" alt="Team_image" style="width: 130px; margin-left: 4px;">
+        </div>
+        <h3 style="color:white; font-family: montseratt;">Vaseeka Balachandiran</h3>
+        <p class="role"; style="color:white; font-family: montseratt;">Data Scientist</p>
+        <p style="color:white; font-family: montseratt;">Analyzes language datasets to enhance translation accuracy and tone adjustment. Works with the software engineer to refine the AI models used in UniVerse.</p>
+      </div>
+      <div class="team_member">
+        <div class="team_img">
+          <img src="images/danielpic.png" alt="Team_image" style="width: 130px; margin-left: -17px; margin-top: -5px;">
+        </div>
+        <h3 style="color:white; font-family: montseratt;">Daniel Diaoussie</h3>
+        <p class="role"; style="color:white; font-family: montseratt;">Marketing Specialist</p>
+        <p style="color:white; font-family: montseratt;">Leads the marketing campaigns for UniVerse. Promotes the product through the website and social media, ensuring effective branding, public awareness of its features, and engaging advertisements.</p></div>
+      <div class="team_member">
+        <div class="team_img">
+          <img src="images/marvenpic.png" alt="Team_image" style="width: 130px; margin-left: -10px;">
+        </div>
+        <h3 style="color:white; font-family: montseratt;">Marven Monalliance</h3>
+        <p class="role"; style="color:white; font-family: montseratt;">Hardware Engineer</p>
+        <p style="color:white; font-family: montseratt;">Designs and prototypes the physical components of UniVerse, including the smart glasses and earpiece. Ensures ergonomic design, durability, and effective integration of the product's hardware and software.</p>
+      </div>
     </div>
+  </div>	
 
-    <div class="profile">
-
-        <img src="images/rayenpic.png" alt="Team member 1" width="160" height="130" hspace="150" vspace="-60" style="margin-left: 50px;">
-
-        <h2 style="font-size: 23px; font-family: 'Comfortaa'; color:white" align="center">Rayen Ben Tamarzizt</h2> <! -- Add your name here. -->
-
-        <img src="images/vasseekapic.png" alt="Team member 2" width="160" height="130" hspace="120" vspace="-60" style="margin-left: 80px;">
-
-        <h2 style="font-size: 23px; font-family: 'Comfortaa'; color:white" align="center">Vaseeka Balachandiran</h2> <! -- Add your name here. -->
-        
-
-        <img src="images/elipic.png" alt="Team member 3" width="160" height="130" hspace="90" vspace="-60" style="margin-left: 50px;">
-
-        <h2 style="font-size: 23px; font-family: 'Comfortaa'; color:white" align="center">Elizabeth Foley</h2> <! -- Add your name here. -->
-       
-    </div>
-
-    <div class="profile">
-        <img src="images/feliciapic.png" alt="Team member 1" width="160" height="130" hspace="90" vspace="-100" style="margin-left: 50px;">
-
-        <h2 style="font-size: 23px; font-family: 'Comfortaa'; color:white" align="center">Felicia Nguyen</h2> <! -- Add your name here. -->
-
-        <img src="images/marvenpic.png" alt="Team member 2" width="160" height="130" hspace="90" vspace="-60" style="margin-left: 60px;">
-
-        <h2 style="font-size: 23px; font-family: 'Comfortaa'; color:white" align="center">Marven Monalliance</h2> <! -- Add your name here. -->
-
-        <img src="images/danielpic.png" alt="Team member 6" width="160" height="130" hspace="90" vspace="-60" style="margin-left: 50px;">
-
-        <h2 style="font-size: 23px; font-family: 'Comfortaa'; color:white" align="center">Daniel Diaoussie</h2> <! -- Add your name here. -->
-        
-    </div>
-
+    </body>
     <div class="image-container" id="contactuspage"> <! -- To change the header image, replace the file named "contact_header" in the images folder. -->
         <div class="overlay-text">
         </div>
@@ -439,62 +455,45 @@ inside. */ -->
     });
     </script>
     
-    <footer style="background-color: #333; color: white; text-align: center; padding: 10px 0; font-family: Verdana">
-        <title>Newsletter Subscription</title>
-        <style>    
-            /* Add some padding and a grey background color to containers */
-            .container {
-                padding: 20px;
-                margin-bottom: 10px; /* Add some space between containers */
-            }
+    <footer class="footer">
+        <div class="newsletter">
+            <h3>Want to Stay Updated?</h3>
+            <p>Sign up for our newsletter today.</p>
+            <form>
+                <input type="email" placeholder="Email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
     
-            /* Style the input elements and the submit button */
-            input[type=text], input[type=submit] {
-                width: 100%;
-                padding: 12px;
-                margin: 8px 0;
-                display: inline-block;
-            }
-    
-            /* Add margins to the checkbox */
-    
-            /* Style the submit button */
-            input[type=submit] {
-                background-color: #04AA6D;
-                color: white;
-                border: none;
-            }
-    
-            input[type=submit]:hover {
-                opacity: 0.8;
-            }
-        </style>
-        <form action="action_page.php">
-            <div class="container">
-              <h2>Stay connected with UniVerse!</h2>
-            </div>
-          
-            <div class="container" style=" font-family: Verdana;">
-              <input type="text" placeholder="Name" name="name" required>
-              <input type="text" placeholder="Email address" name="mail" required>
-            </div>
-          
-            <div class="newsletter-container">
-              <input type="submit" value="Subscribe">
-
-
-
-            </div>
-          </form>
-
-        Copyright &copy; 2024 UniVerse. All Rights Reserved.
-        <p>
-            <div class="official-links">
-                <a-footer-link href="https://UniVerse.github.io" style="color: aliceblue">Privacy Policy</a-footer-link> | 
-                <a-footer-link href="https://UniVerse.github.io" style="color: aliceblue">Use of Cookies</a-footer-link> |
-                <a-footer-link href="https://UniVerse.github.io" style="color: aliceblue"> Terms of Service</a-footer-link>
-            </div>
-        </p>
+            <copyright-section class="copyright-section">
+                <p style="font-size: 0.95em">Copyright &copy; 2024 UniVerse. All Rights Reserved.</p>
+                <p style="font-size: 0.9em">
+                    <a href="https://UniVerse.github.io">Privacy Policy</a> | 
+                    <a href="https://UniVerse.github.io">Use of Cookies</a> |
+                    <a href="https://UniVerse.github.io"> Terms of Service</a>
+                </p>
+            </copyright-section>
+        </div>
     </footer>
+
+    <script>
+        //Makes the footer slide into the screen when the user scrolls to the bottom
+        document.addEventListener("DOMContentLoaded", () => {
+            const footer = document.querySelector('.footer');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        footer.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            observer.observe(footer);
+        });
+    </script>
+    
 </body>
 </html>

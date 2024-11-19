@@ -12,6 +12,7 @@ inside. */ -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 </head>
 
@@ -260,30 +261,75 @@ inside. */ -->
     </div>
 
     <div class="image-container" id="contactuspage"> <! -- To change the header image, replace the file named "contact_header" in the images folder. -->
-        <img src="images/contact_uspic.png" style="filter: brightness(0.7)" alt="Group of employees collaborating">
         <div class="overlay-text">
-            <p style="color: white; text-align:left"><h1 style="color:white; font-family: 'Comfortaa';">Contact Us</h1> <! -- Edit the title here. --></p>
         </div>
     </div>
 
+        
+<div class="white" id="contactuspage">
+
     <div class="contact-form-container">
-        <h2 style= "font-family: 'Comfortaa'";>Contact Form</h2>
-        <form id="contactForm">
-            <div class="form-group">
-                <label for="name" style ="font-family: 'Montserrat'; font-size: 20px;"></label>
-                <input type="text" id="name" 
-                    name="name" 
-                    font-family="Montserrat"
-                    placeholder="Your Name" required>
-                <span class="error-message" id="nameError"></span>
+        <h2 style="font-family: 'Comfortaa'; font-weight: 700; line-height: 0.4; font-size: 50px;">Contact us!</h2>
+        <h2 style="font-family: 'Montserrat'; font-size: 15px; line-height: 0.5; color: rgb(81, 81, 81);">
+            <p style=" margin-bottom: 40px;">Send us a message and we will get back to you in 1-2 business days</p>
+        <div class="contact-box">
+            <!-- Left side: Contact form -->
+            <div class="contact-left">
+                <h2 style="font-family: 'Comfortaa'; text-align: left; font-weight: bold; line-height: 0.4; font-size: 20px;">Send us a request!</h2>
+                <h2 style="font-family: 'Montserrat'; text-align: center; font-size: 15px; line-height: 0.5; color: rgb(81, 81, 81);">
+
+                </h2>
+            
+                <form id="contactForm" style="border: white;">
+                    <div class="form-group">
+                        <label for="name" style="font-size: 20px;"></label>
+                        <input type="text" id="name" name="name" font-family="Montserrat" placeholder="Your Name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" style="font-size: 20px;"></label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" style="font-family: 'Montserrat'; font-size: 20px;"></label>
+                        <textarea id="message" name="message" placeholder="How can we help you?" rows="11" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="email" style ="font-family: 'Montserrat'; font-size: 20px;"></label>
-                <input type="email" id="email" 
-                    name="email" 
-                    placeholder="Your Email" required>
-                <span class="error-message" id="emailError"></span>
+            
+            <!-- Right side: Reach Us -->
+            <div class="contact-right">
+                <h3 style="font-size: 20px; font-family: Comfortaa; color:white ">Reach Us</h3>
+                <!-- You can add your contact info here, such as phone, email, or address -->
+                 <table style = "border-spacing: 0 20px; font-family: Montserrat; color: aliceblue; font-size: 15px;">
+                    <tr>
+                        <td>Email: </td>
+                        <td>universe@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Phone: </td>
+                        <td>+1 234 567 8910</td>
+                    </tr>
+                    <tr>
+                        <td>Address: </td>
+                        <td style="line-height: 1.8;"
+                        >1234 Maple Street, Apt 56<br>
+                            Greenwood City, XY 54321<br>
+                            Country: Fictoria
+
+
+                        </td>
+
+                    </tr>
+                 </table>
             </div>
+        </div>
+    </div>
+
+
             <style>
                 ::placeholder{
                     font-family:'Montserrat';
@@ -293,20 +339,8 @@ inside. */ -->
 
             <! -- Add deleted section here if we want to make this back into an order form -->
 
-            <div class="form-group">
-                <label for="message" style ="font-family: 'Montserrat'; font-size: 20px;"></label>
-                <textarea id="message" 
-                        name="message" 
-                        placeholder="How can we help you?" 
-                        rows="5" required></textarea>
-                <span class="error-message" id="messageError"></span>
-            </div>
-            <button type="submit" 
-                    class="submit-button"> 
-                    Submit
-            </button>
-        </form>
-    </div>
+ 
+</body2>
 
     <script type="text/javascript">
 
@@ -344,7 +378,7 @@ inside. */ -->
         const errorElements = document.querySelectorAll('.error-message');
         errorElements.forEach(el => el.style.display = 'none');
 
-        // Get form values
+        // Get form values f
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         //const phone = document.getElementById('phone').value.trim();

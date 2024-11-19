@@ -8,6 +8,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .blackpage { /* Style of page with black background */
     height: 100vh; /* Size of page can be adjusted as more content get added */
     background-color: black; 
@@ -372,17 +373,66 @@ body {
 
 /* Styles for contact form */
 
+/*
 .contact-form-container {
     background-color: rgb(255, 255, 255);
     border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 40%;
-    margin: 0 auto; /* Centers the form horizontally */
+    box-shadow: 0 4px 200px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin: 0 auto; /* Centers the form horizontally
     padding: 20px;
+    height:60%;
+    overflow-y: auto;
+    display:flex
+}  */
+
+
+
+.contact-form-container {
+    width:80%;
+    margin: 120px auto;
+    box-sizing: border-box
+
+}
+
+
+/* Flex container to arrange the form and Reach Us side by side */
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    height: 550px;
+    border-radius: 20px;
+     /* Space between form and Reach Us section */
+}
+
+/* Left side: Contact form */
+.contact-left {
+    flex: 6; /* The form takes up most of the space */
+    flex-basis:60%;
+    padding: 40px;
+    background-color: #cfcfcf;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Right side: Reach Us section */
+.contact-right {
+    flex:   0 1 500px; /* The Reach Us section takes up less space */
+    padding: 40px;
+    background-color: #595edd; /* Optional background color for the Reach Us section */
+    box-sizing: border-box;
+}
+
+tr td:first-child{
+    padding-right: 20px;
+}
+
+tr td{
+    padding-top: 20px;
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
 }
 
 label {
@@ -425,7 +475,7 @@ textarea {
 }
 
 .submit-button:hover {
-    background-color: #8f91c4
+    background-color: #4f547f 
     ;
 }
 

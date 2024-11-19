@@ -1,17 +1,15 @@
-<! -- The pricing page for our childrens smart glasses. -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Children Model | UniVerse</title>
+    <title>Junior Model | UniVerse</title>
     <link rel="stylesheet" href="/styles.css"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 </head>
-<body class="blackpage">
-    <div class="logo">
+<body>
+    <div class="logo-right">
         <a href="/home.html"><img src="/images/logo.png" alt="Website logo: UniVerse written in blue and purple" width="225" height="100"></a>
     </div>
 
@@ -31,7 +29,6 @@
         </select>
     </div>
 
-
     <div class="experts-container">
         <h1 class="page-title">JUNIOR</h1>
         <div class="content-layout">
@@ -39,9 +36,9 @@
                 <button class="carousel-arrow left-arrow">◀</button>
                 <div class="carousel-frame">
                     <div class="carousel">
-                        <img src="/images/expert1.png" alt="Expert Model 1" class="carousel-image">
-                        <img src="/images/expert2.png" alt="Expert Model 2" class="carousel-image">
-                        <img src="/images/expert3.png" alt="Expert Model 3" class="carousel-image">
+                        <img src="/images/junior1.png" alt="Junior Model 1" class="carousel-image">
+                        <img src="/images/junior2.png" alt="Junior Model 2" class="carousel-image">
+                        <img src="/images/junior3.png" alt="Junior Model 3" class="carousel-image">
                     </div>
                 </div>
                 <button class="carousel-arrow right-arrow">▶</button>
@@ -135,7 +132,6 @@
         text-align: center;
         margin-bottom: 40px;
         margin-top: 10px;
-        margin-right: 60px;
     }
 
     .content-layout {
@@ -176,20 +172,20 @@
     }
 
     .carousel-arrow {
-    background: none;
-    border: none;
-    color: #595edd;
-    font-size: 2.5em;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease, color 0.3s ease;
+        background: none;
+        border: none;
+        color: #595edd;
+        font-size: 2.5em;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease, color 0.3s ease;
     }
 
     .carousel-arrow:hover {
-    transform: translateY(-50%) scale(1.1); 
-    color: #6e73a6; 
+        transform: translateY(-50%) scale(1.1); 
+        color: #6e73a6; 
     }
 
     .left-arrow {
@@ -219,13 +215,13 @@
     }
 
     .features-section {
-    width: 30%;
-    font-size: 1.2em;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 250px; 
+        width: 30%;
+        font-size: 1.2em;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 250px; 
     }
 
     .add-to-cart {
@@ -238,23 +234,11 @@
         cursor: pointer;
         transition: background-color 0.3s;
         margin-top: 30px;
-        margin-left: 60px;
     }
 
     .add-to-cart:hover {
         background-color: #6e73a6;
     }
-    
     </style>
-
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            const menuIcon = document.querySelector(".menu-icon");
-
-            sidebar.classList.toggle("active");
-            menuIcon.classList.toggle("hidden");
-        }
-    </script>
 </body>
 </html>

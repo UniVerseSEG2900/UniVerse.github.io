@@ -335,6 +335,7 @@ body {
   height: auto;
 }
 
+/*Overview page styling*/
 .overlay-text { /* Styles for text overlapping images */
   position: absolute;
   top: 50%; /* Centers the title */
@@ -353,36 +354,62 @@ body {
     height: auto
 }
   
-  .overview-backdrop-container img { /* Makes the image allow for overlap */
+.overview-backdrop-container img { /* Makes the image allow for overlap */
     display: block;
     width: 100%;
     height: auto;
 }
   
-  .overview-overlay-title { /* Styles for text overlapping images */
-    position: absolute;
-    top: 45%; /* Centers the title */
-    left: 50%; /* Centers the title */
-    transform: translate(-94%, -90%);
-    color: #ffffff;
-    background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind title */
-    padding: 0px 40px;
+.flip-box {
+    background-color: transparent;
+    width: 40vw;
+    height: 20vw;
+    /*border: 1px dotted #f1f1f1;*/
+    perspective: 1000px;
+
     font-family: Comfortaa;
-    font-size: 24px
-}
+    font-size: 1.8vw;
+    font-weight: bold;
+    line-height: 1.4;
 
-  .overview-overlay-text { /* Styles for text overlapping images */
+    position: absolute; /* Overlay the textbox */
+    top: 8%; /* Adjust vertical positioning as needed */
+    left: 4%; /* Adjust horizontal positioning as needed */
+}
+  
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+.flip-box:hover .flip-box-inner {
+    transform: rotateX(180deg);
+}
+  
+.flip-box-front, .flip-box-back {
     position: absolute;
-    top: 50%; /* Centers the text vertically */
-    left: 50%; /* Left alligns the text */
-    transform: translate(-7%, 55%);
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+.flip-box-front {
     color: #ffffff;
-    background-color: rgba(13, 0, 44, 0.5); /* Creates semi-transparent backdrop behind text */
-    padding: 10px 10px;
-    font-family: Montserrat;
-    font-size: 20px
+    background-color: rgba(13, 0, 44, 0.5);
+}
+  
+.flip-box-back {
+    color: #ffffff;
+    background-color: rgba(13, 0, 44, 0.5);
+    transform: rotateX(180deg);
 }
 
+/*Profile image styling*/
 .img {
     height: 200px; /* Size of each profile's section */
     background-color: #e9ebec;

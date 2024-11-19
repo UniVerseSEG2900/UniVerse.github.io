@@ -441,6 +441,58 @@ body {
     width: 50%;
     margin: 0 auto; /* Centers the form horizontally
     padding: 20px;
+<<<<<<< HEAD
+    height:60%;
+    overflow-y: auto;
+    display:flex
+}  */
+
+
+
+.contact-form-container {
+    width:80%;
+    margin: 120px auto;
+    box-sizing: border-box
+
+}
+
+
+/* Flex container to arrange the form and Reach Us side by side */
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    height: 550px;
+    border-radius: 20px;
+     /* Space between form and Reach Us section */
+}
+
+/* Left side: Contact form */
+.contact-left {
+    flex: 6; /* The form takes up most of the space */
+    flex-basis:60%;
+    padding: 40px;
+    background-color: white;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Right side: Reach Us section */
+.contact-right {
+    flex:   0 1 500px; /* The Reach Us section takes up less space */
+    padding: 40px;
+    background-color: #595edd; /* Optional background color for the Reach Us section */
+    box-sizing: border-box;
+}
+
+tr td:first-child{
+    padding-right: 20px;
+}
+
+tr td{
+    padding-top: 20px;
+=======
+    margin-top: 35px
+>>>>>>> e93af25b193f4935c01ca438a03ff798e0313987
 }
 
 .form-group {
@@ -487,8 +539,10 @@ textarea {
 }
 
 .submit-button:hover {
-    background-color: #8f91c4
-    ;
+<<<<<<< HEAD
+    background-color: #7778ac
+
+
 }
 
 /*Styles the footer and newsletter*/

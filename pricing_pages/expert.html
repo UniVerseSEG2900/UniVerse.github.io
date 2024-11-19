@@ -1,3 +1,5 @@
+<! -- The pricing page for our experts smart glasses. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,11 +54,13 @@
             <div class="features-section">
                 <h2>Features</h2>
                 <ul>
-                    <li>Translate up to 20 languages</li>
+                    <li>Translate up to 20 languages</li> 
                     <li>Voice recording and support</li>
                     <li>Additional app integrations</li>
                 </ul>
-                <button class="add-to-cart">Add to Cart</button>
+                <a href="/Pricing_pages/cart.html">
+                    <button class="add-to-cart">Add to Cart</button>
+                </a>
             </div>
         </div>
     </div>
@@ -67,7 +71,6 @@
             sidebar.classList.toggle("active");
         }
 
-        // Carousel Functionality
         let currentIndex = 0;
         const images = document.querySelectorAll('.carousel-image');
         const dots = document.querySelectorAll('.dot');
@@ -124,29 +127,31 @@
     }
 
     .page-title {
-        font-size: 2.5em;
-        color: #8f91c4;
+        font-size: 3.5em;
+        color: #595edd;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 40px;
+        margin-top: 10px;
+        margin-right: 60px;
     }
 
     .content-layout {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        width: 90%;
-        max-width: 1200px;
+        width: 100%;
+        max-width: 1400px;
     }
 
     .carousel-container {
         position: relative;
         width: 65%;
-        max-width: 800px;
-        height: 500px;
+        max-width: 900px;
+        height: 600px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 70px;
     }
 
     .carousel-frame {
@@ -168,14 +173,20 @@
     }
 
     .carousel-arrow {
-        background: none;
-        border: none;
-        color: #8f91c4;
-        font-size: 2.5em;
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #595edd;
+    font-size: 2.5em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .carousel-arrow:hover {
+    transform: translateY(-50%) scale(1.1); 
+    color: #6e73a6; 
     }
 
     .left-arrow {
@@ -211,11 +222,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 20px; 
+    margin-top: 250px; 
     }
 
     .add-to-cart {
-        background-color: #8f91c4;
+        background-color: #595edd;
         color: #fff;
         border: none;
         padding: 12px 24px;
@@ -223,7 +234,8 @@
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s;
-        margin-top: 20px;
+        margin-top: 30px;
+        margin-left: 60px;
     }
 
     .add-to-cart:hover {

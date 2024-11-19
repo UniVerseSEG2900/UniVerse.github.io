@@ -31,6 +31,220 @@
         </select>
     </div>
 
+
+    <div class="experts-container">
+        <h1 class="page-title">Experts</h1>
+        <div class="content-layout">
+            <div class="carousel-container">
+                <button class="carousel-arrow left-arrow">◀</button>
+                <div class="carousel-frame">
+                    <div class="carousel">
+                        <img src="/images/expert1.png" alt="Expert Model 1" class="carousel-image">
+                        <img src="/images/expert2.png" alt="Expert Model 2" class="carousel-image">
+                        <img src="/images/expert3.png" alt="Expert Model 3" class="carousel-image">
+                    </div>
+                </div>
+                <button class="carousel-arrow right-arrow">▶</button>
+                <div class="carousel-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <h2>Features</h2>
+                <ul>
+                    <li>Translate up to 20 languages</li> 
+                    <li>Voice recording and support</li>
+                    <li>Additional app integrations</li>
+                </ul>
+                <a href="/Pricing_pages/cart.html">
+                    <button class="add-to-cart">Add to Cart</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active");
+        }
+
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const dots = document.querySelectorAll('.dot');
+
+        function updateCarousel() {
+            images.forEach((img, index) => {
+                img.style.display = index === currentIndex ? 'block' : 'none';
+            });
+            dots.forEach((dot, index) => {
+                dot.style.backgroundColor = index === currentIndex ? '#8f91c4' : '#ddd';
+            });
+        }
+
+        document.querySelector('.left-arrow').addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            updateCarousel();
+        });
+
+        document.querySelector('.right-arrow').addEventListener('click', () => {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+
+        updateCarousel();
+    </script>
+
+    <style>
+    body {
+        background-color: #000;
+        color: #fff;
+        font-family: 'Comfortaa', sans-serif;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    .logo-right {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .experts-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 3.5em;
+        color: #595edd;
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 10px;
+        margin-right: 60px;
+    }
+
+    .content-layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 1400px;
+    }
+
+    .carousel-container {
+        position: relative;
+        width: 65%;
+        max-width: 900px;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
+    }
+
+    .carousel-frame {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-arrow {
+    background: none;
+    border: none;
+    color: #595edd;
+    font-size: 2.5em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .carousel-arrow:hover {
+    transform: translateY(-50%) scale(1.1); 
+    color: #6e73a6; 
+    }
+
+    .left-arrow {
+        left: 15px;
+    }
+
+    .right-arrow {
+        right: 15px;
+    }
+
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+    }
+
+    .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #ddd;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .features-section {
+    width: 30%;
+    font-size: 1.2em;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 250px; 
+    }
+
+    .add-to-cart {
+        background-color: #595edd;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        font-size: 1em;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 30px;
+        margin-left: 60px;
+    }
+
+    .add-to-cart:hover {
+        background-color: #6e73a6;
+    }
+    
+    </style>
+
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById("sidebar");

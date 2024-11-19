@@ -9,13 +9,11 @@
 </head>
 <body>
     <div class="coming-soon-container">
-        <!-- Centered Logo -->
         <div class="logo-center">
             <a href="/home.html"><img src="/images/logo.png" alt="Website logo: UniVerse written in blue and purple" width="225" height="100"></a>
         </div>
 
-        <!-- Coming Soon Message -->
-        <h1 class="coming-soon-message">Coming Soon</h1>
+        <h1 class="coming-soon-message" id="comingSoonText">Coming Soon</h1>
     </div>
 
     <style>
@@ -35,7 +33,6 @@
         text-align: center;
     }
 
-    /* Centered Logo */
     .logo-center {
         margin-bottom: 20px;
     }
@@ -44,7 +41,37 @@
         font-size: 2.5em;
         color: #595edd;
         margin: 0;
+        transition: opacity 0.5s ease-in-out;
     }
     </style>
+
+<script>
+    const messages = [
+        "Coming Soon",  
+        "À venir bientôt",  
+        "Próximamente",  
+        "Demnächst",  // German
+        "In arrivo",  // Italian
+        "即将推出",  // Chinese
+        "곧 출시",  // Korean
+        "जल्द आ रहा है",  // Hindi
+        "В скором времени"  // Russian
+    ];
+
+    let currentIndex = 0;
+    const comingSoonText = document.getElementById("comingSoonText");
+
+    function cycleMessages() {
+        comingSoonText.style.opacity = 0;  
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % messages.length;
+            comingSoonText.textContent = messages[currentIndex];
+            comingSoonText.style.opacity = 1;  
+        }, 500);  // duration of the fade out effect
+    }
+
+    // Change message every 2 seconds
+    setInterval(cycleMessages, 2000);
+    </script>
 </body>
 </html>

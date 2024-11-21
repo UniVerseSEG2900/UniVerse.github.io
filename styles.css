@@ -461,7 +461,7 @@ body {
 .contact-box {
     display: flex;
     justify-content: space-between;
-    height: 550px;
+    height: fit-content;
     border-radius: 20px;
      /* Space between form and Reach Us section */
 }

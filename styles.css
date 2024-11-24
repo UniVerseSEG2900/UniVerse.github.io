@@ -441,7 +441,6 @@ body {
     width: 50%;
     margin: 0 auto; /* Centers the form horizontally
     padding: 20px;
-<<<<<<< HEAD
     height:60%;
     overflow-y: auto;
     display:flex
@@ -490,9 +489,7 @@ tr td:first-child{
 
 tr td{
     padding-top: 20px;
-=======
     margin-top: 35px
->>>>>>> e93af25b193f4935c01ca438a03ff798e0313987
 }
 
 .form-group {

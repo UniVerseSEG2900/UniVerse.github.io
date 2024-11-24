@@ -26,12 +26,6 @@ inside. */ -->
         <a href="#aboutuspage"><img src="Navbar%20icons/aboutus%20icon.png" alt="About Us" class="nav-icon"></a>
         <a href="#contactuspage"><img src="Navbar%20icons/contactus%20icon.png" alt="Contact Us" class="nav-icon"></a>
         <a href="pricing_pages/cart.html"><img src="Navbar%20icons/cart%20icon.png" alt="cart" class="nav-icon"></a>
-
-        <select id="languageSelector">
-            <option value="en">EN</option>
-            <option value="fr">FR</option>
-            <option value="es">ES</option>
-        </select>
     </div>
 
     <script>
@@ -459,17 +453,17 @@ inside. */ -->
         <div class="newsletter">
             <h3>Want to Stay Updated?</h3>
             <p>Sign up for our newsletter today.</p>
-            <form>
-                <input type="email" placeholder="Email address" required>
-                <button type="submit">Subscribe</button>
+            <form id="subscribeForm">
+                <input type="email" id="emailInput" placeholder="Email address" required>
+                <button type="submit" id="subscribeButton">Subscribe</button>
             </form>
     
             <copyright-section class="copyright-section">
                 <p style="font-size: 0.95em">Copyright &copy; 2024 UniVerse. All Rights Reserved.</p>
                 <p style="font-size: 0.9em">
-                    <a href="https://UniVerse.github.io">Privacy Policy</a> | 
-                    <a href="https://UniVerse.github.io">Use of Cookies</a> |
-                    <a href="https://UniVerse.github.io"> Terms of Service</a>
+                    <a href="privacy-policy.html">Privacy Policy</a> | 
+                    <a href="cookie-policy.html">Use of Cookies</a> |
+                    <a href="terms-of-service.html"> Terms of Service</a>
                 </p>
             </copyright-section>
         </div>
@@ -492,6 +486,35 @@ inside. */ -->
             });
 
             observer.observe(footer);
+
+            // Form functionality
+            const form = document.querySelector('#subscribeForm');
+            const subscribeButton = document.querySelector('#subscribeButton');
+            let isFormChanged = false;
+
+            // Detect changes to form input
+            form.addEventListener('input', () => {
+                isFormChanged = true;
+            });
+
+            // Handle form submission
+            subscribeButton.addEventListener('click', (event) => {
+                if (form.checkValidity()) {
+                    alert("Form submitted successfully!");
+                    event.preventDefault(); // Prevent the default form submission behavior
+                    form.reset(); // Resets all form fields to their initial values
+                    isFormChanged = false; // Reset after submission
+                }
+            });
+
+            // Warn on unsaved changes when leaving the page
+            window.addEventListener('beforeunload', (event) => {
+                if (isFormChanged) {
+                    const message = "You have unsaved data. Are you sure you want to leave?";
+                    event.returnValue = message; // Standard for most browsers
+                    return message; // For some browsers
+                }
+            });
         });
     </script>
     

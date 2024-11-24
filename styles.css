@@ -513,6 +513,7 @@ input, textarea {
     border-radius: 20px;
     box-sizing: border-box;
     font-size: 1rem;
+    font-family: Montserrat;
 }
 
 textarea {
